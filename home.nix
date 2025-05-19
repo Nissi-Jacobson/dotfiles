@@ -76,7 +76,6 @@
   
   # cursor customizations
   home.pointerCursor = {
-    enable = true;
     name = "Bibata-Modern-Ice";
     size = 24;
     package = pkgs.bibata-cursors;
