@@ -142,8 +142,7 @@
   pkgs.gnomeExtensions.clipboard-history
   pkgs.gnomeExtensions.extension-list
   pkgs.gnomeExtensions.gnome-40-ui-improvements
-  #pkgs.gnomeExtensions.appindicator
-  pkgs.gnomeExtensions.topicons-plus
+  pkgs.gnomeExtensions.appindicator
   pkgs.gnomeExtensions.gsconnect
  # end of gnome shells extensions
   ];
