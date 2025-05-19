@@ -83,6 +83,20 @@
     };
   };
 
+  # gnome extension customizations
+  dconf = {
+    enable = true;
+    settings = {
+      "org/gnome/desktop/sound" = {
+        allow-volume-above-100-percent = true;
+      };
+      "org/gnome/shell" = {
+        disable-user-extensions = false;
+
+      };
+    };
+  };
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }

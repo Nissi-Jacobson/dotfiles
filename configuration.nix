@@ -78,8 +78,7 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
+    jack.enable = true;
 
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
@@ -95,7 +94,7 @@
     description = "Nissi Jacobson";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      kdePackages.kate
+#      kdePackages.kate
     #  thunderbird
     ];
   };
@@ -121,12 +120,10 @@
   pkgs.kdePackages.kdenlive
   pkgs.auto-cpufreq
   pkgs.brave
-  pkgs.kdePackages.kdeconnect-kde
   pkgs.lutris
   pkgs.lazygit
   pkgs.fzf
   pkgs.fd
-  pkgs.ripgrep
   pkgs.ripgrep-all
   pkgs.kitty
   pkgs.kittysay
@@ -134,6 +131,21 @@
   pkgs.mpv
   pkgs.qbittorrent
   pkgs.dconf-editor
+  pkgs.gnome-tweaks
+  pkgs.gnome-extension-manager
+ # gnome shell extensions
+  pkgs.gnomeExtensions.blur-my-shell
+  pkgs.gnomeExtensions.user-themes
+  pkgs.gnomeExtensions.transparent-top-bar
+  pkgs.gnomeExtensions.caffeine
+  pkgs.gnomeExtensions.just-perfection
+  pkgs.gnomeExtensions.clipboard-history
+  pkgs.gnomeExtensions.extension-list
+  pkgs.gnomeExtensions.gnome-40-ui-improvements
+  #pkgs.gnomeExtensions.appindicator
+  pkgs.gnomeExtensions.topicons-plus
+  pkgs.gnomeExtensions.gsconnect
+ # end of gnome shells extensions
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
