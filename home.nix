@@ -18,7 +18,7 @@
   ];
 
  # adding dotfiles
-  home.file.".config/nvim".source = "./nvim";
+  home.file.".config/nvim".source = builtins.toPath "./nvim";
  
   # The home.sessionVariables option allows you to install Nix packages into your
   # sessionVariables
