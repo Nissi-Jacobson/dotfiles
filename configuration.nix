@@ -132,7 +132,6 @@
   pkgs.qbittorrent
   pkgs.dconf-editor
   pkgs.gnome-tweaks
-  pkgs.gnome-extension-manager
  # gnome shell extensions
   pkgs.gnomeExtensions.blur-my-shell
   pkgs.gnomeExtensions.user-themes
