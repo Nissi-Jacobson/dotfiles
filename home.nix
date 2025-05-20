@@ -46,7 +46,7 @@
       size = 10;
     };
     shellIntegration = {
-      mode = null;
+      mode = "";
       enableZshIntegration = true;
     };
     settings = {
