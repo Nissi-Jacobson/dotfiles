@@ -56,9 +56,6 @@
   dconf = {
     enable = true;
     settings = {
-      "org/gnome/desktop/sound" = {
-        allow-volume-above-100-percent = true;
-      };
       "org/gnome/shell" = {
         disable-user-extensions = false;
         enabled-extensions = [
@@ -76,7 +73,7 @@
         "user-theme@gnome-shell-extensions.gcampax.github.com"
         ];
       };
-      "org/gnome/shell/extensons/blur-my-shell/hidetopbar".compatibility = false;
+      "org/gnome/shell/extensions/blur-my-shell/hidetopbar".compatibility = false;
       "org/gnome/shell/extensions/blur-my-shell/panel".static-blur = false;
       "/org/gnome/shell/extensions/blur-my-shell/applications" = {
         blur = true;
@@ -89,8 +86,22 @@
       };
       "/org/gnome/shell/extensions/status-area-horizontal-spacing".hpadding = 3;
       "org/gnome/shell/extensions/hidetopbar".mouse-sensitive = true;
-      #"org/gnome/desktop/interface".show-battery-percentage = true;
-      
+      "org/gnome/desktop/interface" = {
+        #show-battery-percentage = true;
+        color-scheme = "prefer-dark";
+        cursor-size = 24;
+        cursor-theme = "Adwaita";
+        enable-animations = true;
+        enable-hot-corners = true;
+        font-name = "Noto Sans, 10";
+        #gtk-theme = "Adwaita";
+        scaling-factor = 1;
+        text-scaling-factor = 1;
+      };
+      "/org/gnome/desktop/sound" = {
+          allow-volume-above-100-percent = true;
+          event-sounds = false;
+      };
     };
   };
 
