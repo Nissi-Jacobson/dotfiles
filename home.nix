@@ -1,5 +1,13 @@
 { config, pkgs, ... }:
 
+let
+  myShellAliases = {
+    ll = "ls -l";
+    la = "ls -a";
+    lal = "ls -al";
+    ".." = "cd ..";
+  };
+in
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -44,6 +52,12 @@
   };
 
  # customizations
+ 
+  # fish customization
+  programs.fish = {
+    plugins = [];
+    shellAliases = myShellAliases;
+  };
   
   # kitty configuration
   programs.kitty = {
@@ -60,13 +74,7 @@
  
   # zsh customization
   programs.zsh = {
-    enable = true;
-    shellAliases = {
-      ll = "ls -l";
-      la = "ls -a";
-      lal = "ls -al";
-      ".." = "cd ..";
-    };
+    shellAliases = myShellAliases;
     autocd = true;
     enableCompletion = true;
     autosuggestion.enable = true;

@@ -105,9 +105,14 @@
   # install and setup direnv
   programs.direnv.enable = true;
 
-  # install and setup zsh
+  # install zsh
   programs.zsh.enable = true;
-  users.defaultUserShell = pkgs.zsh;
+
+  # install fish
+  programs.fish.enable = true;
+
+  # default shell for all users
+  users.defaultUserShell = pkgs.fish;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
