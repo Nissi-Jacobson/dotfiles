@@ -15,6 +15,18 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
+ # gnome shell extensions
+  pkgs.gnomeExtensions.blur-my-shell
+  pkgs.gnomeExtensions.user-themes
+  pkgs.gnomeExtensions.transparent-top-bar
+  pkgs.gnomeExtensions.caffeine
+  pkgs.gnomeExtensions.just-perfection
+  pkgs.gnomeExtensions.clipboard-history
+  pkgs.gnomeExtensions.extension-list
+  pkgs.gnomeExtensions.gnome-40-ui-improvements
+  pkgs.gnomeExtensions.appindicator
+  pkgs.gnomeExtensions.gsconnect
+ # end of gnome shells extensions
   ];
 
  # adding dotfiles
@@ -54,8 +66,20 @@
       };
       "org/gnome/shell" = {
         disable-user-extensions = false;
-
+        enabled-extensions = [
+        "appindicatorsupport@rgcjonas.gmail.com"
+        "blur-my-shell@aunetx"
+        "caffeine@patapon.info"
+        "clipboard-history@alexsaveau.dev"
+        "extension-list@tu.berry"
+        "gnome-ui-tune@itstime.tech"
+        "gsconnect@andyholmes.github.io"
+        "just-perfection-desktop@just-perfection"
+        "transparent-top-bar@zhanghai.me"
+        "user-theme@gnome-shell-extensions.gcampax.github.com"
+        ];
       };
+      "org/gnome/desktop/interface".show-battery-percentage = true;
     };
   };
 

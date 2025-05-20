@@ -132,18 +132,7 @@
   pkgs.qbittorrent
   pkgs.dconf-editor
   pkgs.gnome-tweaks
- # gnome shell extensions
-  pkgs.gnomeExtensions.blur-my-shell
-  pkgs.gnomeExtensions.user-themes
-  pkgs.gnomeExtensions.transparent-top-bar
-  pkgs.gnomeExtensions.caffeine
-  pkgs.gnomeExtensions.just-perfection
-  pkgs.gnomeExtensions.clipboard-history
-  pkgs.gnomeExtensions.extension-list
-  pkgs.gnomeExtensions.gnome-40-ui-improvements
-  pkgs.gnomeExtensions.appindicator
-  pkgs.gnomeExtensions.gsconnect
- # end of gnome shells extensions
+
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
