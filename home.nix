@@ -82,7 +82,7 @@
         ];
       };
       "org/gnome/shell/extensons/blur-my-shell" = {
-        "./panel".blur-type = "dynamic";
+        #"./panel".blur-type = "dynamic";
 #        "./applications".blur-on-overview = true;
 #        "./applications".enable-all-by-default = true;
       };
