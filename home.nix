@@ -79,12 +79,10 @@
         "user-theme@gnome-shell-extensions.gcampax.github.com"
         ];
       };
-      "org/gnome/shell/extensons/blur-my-shell@aunetx" = {
-        "panel blur.enable" = "enable";
-        "panel blur.blur type" = "dynamic";
-        "applicatons blur.enable" = "enable";
-        "applications  blur.blur on overview" = "enable";
-        "applications blur.enable all by default" = "enable";
+      "org/gnome/shell/extensons/blur-my-shell" = {
+        "./panel."blur type = "dynamic";
+        "./applications".blur on overview = true;
+        "./applications".enable all by default = true;
       };
       "org/gnome/desktop/interface".show-battery-percentage = true;
       
