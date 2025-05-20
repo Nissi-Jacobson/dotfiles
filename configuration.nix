@@ -105,6 +105,10 @@
   # install and setup direnv
   programs.direnv.enable = true;
 
+  # install and setup zsh
+  programs.zsh.enable = true;
+  users.defaultUserShell = pkgs.zsh;
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -132,11 +136,8 @@
   pkgs.qbittorrent
   pkgs.dconf-editor
   pkgs.gnome-tweaks
-  pkgs.zsh
   ];
   
-  program.zsh.enable = true;
-  users.defaultUserShell = pkgs.zsh;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
