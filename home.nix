@@ -30,17 +30,12 @@
   pkgs.gnomeExtensions.status-area-horizontal-spacing
  # end of gnome shells extensions
   pkgs._0xproto
+  pkgs.oh-my-zsh
   ];
 
  # adding dotfiles
   home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/nissi/dotfiles/nvim";
   
-  # The home.sessionVariables option allows you to install Nix packages into your
-  # sessionVariables
-  home.sessionVariables = {
-    # EDITOR = "emacs";
-  };
-
  # customizations
   
   # kitty configuration
@@ -50,7 +45,10 @@
       name = "0xProto";
       size = 10;
     };
-    shellIntegration.enableZshIntegration = true;
+    shellIntegration = {
+      mode = null;
+      enableZshIntegration = true;
+    };
     settings = {
       background_opacity = "0.8";
       confirm_os_window_close = -1;
