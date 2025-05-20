@@ -58,12 +58,13 @@
     };
   };
  
-  # bash customization
+  # zsh customization
   programs.zsh = {
     enable = true;
     shellAliases = {
       ll = "ls -l";
       la = "ls -a";
+      lal = "ls -al";
       ".." = "cd ..";
     };
     autocd = true;
