@@ -53,7 +53,7 @@
     shellIntegration.enableZshIntegration = true;
     settings = {
       background_opacity = "0.8";
-      confirm_os_window_close = false;
+      confirm_os_window_close = -1;
     };
   };
  
