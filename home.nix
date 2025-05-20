@@ -88,7 +88,7 @@
       "/org/gnome/shell/extensions/blur-my-shell/applications" = {
         blur = true;
         blur-on-overview = true;
-        enable all = true;
+        enable-all = true;
       };
       "/org/gnome/shell/extensions/gnome-ui-tune" = {
         hide-search = true;
