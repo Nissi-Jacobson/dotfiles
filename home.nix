@@ -73,7 +73,7 @@
         "user-theme@gnome-shell-extensions.gcampax.github.com"
         ];
       };
-      "org/gnome/shell/extensions/blur-my-shell/hidetopbar".compatibility = false;
+      "org/gnome/shell/extensions/blur-my-shell/hidetopbar".compatibility = true;
       "org/gnome/shell/extensions/blur-my-shell/panel".static-blur = false;
       "org/gnome/shell/extensions/blur-my-shell/applications" = {
         blur = true;
