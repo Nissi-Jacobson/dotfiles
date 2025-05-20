@@ -33,7 +33,7 @@
   ];
 
  # adding dotfiles
-  home.file.".config/nvim".source = "/home/nissi/dotfiles/nvim";
+  home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/nissi/dotfiles/nvim";
   
   # The home.sessionVariables option allows you to install Nix packages into your
   # sessionVariables
@@ -44,14 +44,14 @@
  # customizations
   
   # font config
- # fonts = {
- #   fontconfig.enable = true;
- #   fontconfig.defaultFonts = {
- #     monospace =  [0xproto Nerd Font Mono];
- #     sansSerif =  [0xproto Nerd Font ];
- #     serif = [0xproto Nerd Font ];
- #   };
- # };
+  fonts = {
+    fontconfig.enable = true;
+    fontconfig.defaultFonts = {
+      monospace =  ["0xProto-Regular"];
+      sansSerif =  ["0xProto-Regular"];
+      serif = ["0xProto-Regular"];
+    };
+  };
 
   # bash customization
   programs.bash = {
