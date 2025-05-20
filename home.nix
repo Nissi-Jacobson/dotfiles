@@ -32,9 +32,9 @@
   ];
 
  # adding dotfiles
-  home.file = {
-    ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/nissi/dotfiles/nvim";
-  };
+  #home.file = {
+  #  ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/nissi/dotfiles/nvim";
+  #};
 
   # The home.sessionVariables option allows you to install Nix packages into your
   # sessionVariables
@@ -91,7 +91,13 @@
         allow-volume-above-100-percent = true;
         event-sounds = false;
       };
-      "org/gnome/mutter".dynamic-workspaces = true;
+      "org/gnome/desktop/vm/preferences" = {
+        focus-mode = "sloppy";
+      };
+      "org/gnome/mutter" = {
+        center-new-windows = true;
+        dynamic-workspaces = true;
+      };
       "org/gnome/nautilus/preferences" = {
         default-folder-viewer = "list-view";
         migrated-gtk-settings = true;
