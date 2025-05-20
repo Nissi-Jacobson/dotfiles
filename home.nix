@@ -43,16 +43,20 @@
 
  # customizations
   
-  # font config
-  fonts = {
-    fontconfig.enable = true;
-    fontconfig.defaultFonts = {
-      monospace =  ["0xProto-Regular"];
-      sansSerif =  ["0xProto-Regular"];
-      serif = ["0xProto-Regular"];
+  # kitty configuration
+  programs.kitty = {
+    enable = true;
+    font = {
+      name = "0xProto";
+      size = 10;
+    };
+    shellIntegration.enableZshIntegration = true;
+    settings = {
+      background_opacity = 0.8;
+      confirm_os_window_close = false;
     };
   };
-
+ 
   # bash customization
   programs.bash = {
     enable = true;
@@ -91,7 +95,8 @@
         cursor-theme = "Adwaita";
         enable-animations = true;
         enable-hot-corners = true;
-        font-name = "Noto Sans, 10";
+        font-name = "0xProto, 10";
+        monospace-font-name = "0xProto 10";
         #gtk-theme = "Adwaita";
         scaling-factor = 1;
         text-scaling-factor = 1;
