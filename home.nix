@@ -64,7 +64,7 @@
         "caffeine@patapon.info"
         "clipboard-history@alexsaveau.dev"
         "extension-list@tu.berry"
-        "gnome-ui-tune@itstime.tech"
+        #"gnome-ui-tune@itstime.tech"
         "gsconnect@andyholmes.github.io"
         "hidetopbar@mathieu.bidon.ca"
         "just-perfection-desktop@just-perfection"
@@ -80,19 +80,18 @@
         blur-on-overview = true;
         enable-all = true;
       };
-      "org/gnome/shell/extensions/gnome-ui-tune" = {
-        hide-search = true;
-        increase-thumbnails-size = "200%";
-      };
+      #"org/gnome/shell/extensions/gnome-ui-tune" = {
+      #  hide-search = true;
+      #  increase-thumbnails-size = "200%";
+      #};
       "org/gnome/shell/extensions/status-area-horizontal-spacing".hpadding = 3;
       "org/gnome/shell/extensions/hidetopbar" = {
-        enable-active-window = false;
-        enable-intellihide = false;
+        enable-active-window = true;
+        enable-intellihide = true;
         hot-corner = false;
-        keep-rounded-courners = false;
         mouse-sensitive = true;
         mouse-triggers-overview = false;
-        show-in-overview = false;
+        show-in-overview = true;
       };
       "org/gnome/desktop/interface" = {
         #show-battery-percentage = true;
