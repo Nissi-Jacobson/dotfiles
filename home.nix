@@ -85,7 +85,15 @@
         increase-thumbnails-size = "200%";
       };
       "org/gnome/shell/extensions/status-area-horizontal-spacing".hpadding = 3;
-      "org/gnome/shell/extensions/hidetopbar".mouse-sensitive = true;
+      "org/gnome/shell/extensions/hidetopbar" = {
+        enable-active-window = false;
+        enable-intellihide = false;
+        hot-corner = false;
+        keep-rounded-courners = false;
+        mouse-sensitive = true;
+        mouse-triggers-overview = false;
+        show-in-overview = false;
+      };
       "org/gnome/desktop/interface" = {
         #show-battery-percentage = true;
         color-scheme = "prefer-dark";
