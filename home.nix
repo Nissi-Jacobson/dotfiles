@@ -29,7 +29,7 @@
   pkgs.gnomeExtensions.hide-top-bar
   pkgs.gnomeExtensions.status-area-horizontal-spacing
  # end of gnome shells extensions
-  pkgs.nerd-fonts._0xproto
+  pkgs._0xproto
   ];
 
  # adding dotfiles
