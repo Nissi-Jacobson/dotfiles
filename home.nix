@@ -76,17 +76,27 @@
         "extension-list@tu.berry"
         "gnome-ui-tune@itstime.tech"
         "gsconnect@andyholmes.github.io"
+        "hidetopbar@mathieu.bidon.ca"
         "just-perfection-desktop@just-perfection"
+        "status-area-horizontal-spacing@mathematical.coffee.gmail.com"
         #"transparent-top-bar@zhanghai.me"
         "user-theme@gnome-shell-extensions.gcampax.github.com"
         ];
       };
-      "org/gnome/shell/extensons/blur-my-shell" = {
-        #"./panel".blur-type = "dynamic";
-#        "./applications".blur-on-overview = true;
-#        "./applications".enable-all-by-default = true;
+      "org/gnome/shell/extensons/blur-my-shell/hidetopbar".compatibility = false;
+      "org/gnome/shell/extensions/blur-my-shell/panel".static-blur = false;
+      "/org/gnome/shell/extensions/blur-my-shell/applications" = {
+        blur = true;
+        blur-on-overview = true;
+        enable all = true;
       };
-      "org/gnome/desktop/interface".show-battery-percentage = true;
+      "/org/gnome/shell/extensions/gnome-ui-tune" = {
+        hide-search = true;
+        increase-thumbnails-size = "200%";
+      };
+      "/org/gnome/shell/extensions/status-area-horizontal-spacing".hpadding = 3;
+      "org/gnome/shell/extensions/hidetopbar".mouse-sensitive = true;
+      #"org/gnome/desktop/interface".show-battery-percentage = true;
       
     };
   };
