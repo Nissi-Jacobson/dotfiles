@@ -99,19 +99,10 @@
     ];
   };
 
-  # Install firefox.
-  programs.firefox.enable = true;
-
   # install and setup direnv
-  programs.direnv.enable = true;
+  # programs.direnv.enable = true;
 
-  # install zsh
-  programs.zsh.enable = true;
-
-  # install fish
-  programs.fish.enable = true;
-
-  # default shell for all users
+ # default shell for all users
   users.defaultUserShell = pkgs.fish;
 
   # Allow unfree packages
@@ -141,6 +132,13 @@
   pkgs.qbittorrent
   pkgs.dconf-editor
   pkgs.gnome-tweaks
+  pkgs.obsidian
+  pkgs.firefox
+  pkgs.zsh
+  pkgs.fish
+  pkgs.ghostty
+  pkgs.kitty
+  pkgs.direnv 
   ];
   
 

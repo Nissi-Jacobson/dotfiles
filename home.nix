@@ -53,6 +53,22 @@ in
 
  # customizations
  
+  # ghostty customization
+  programs.ghostty = {
+    enable = true;
+    clearDefaultKeybinds = true;
+    installVimSyntax = true;
+    settings = {
+      #theme = "tokyonight-night";
+      font-family = "0xproto";
+      font-size = 10;
+      background_opacity = 0.69;
+      background_blur = true;
+      focus-follows-mouse = true;
+      quit-after-last-window-closed = true;
+    };
+  };
+
   # fish customization
   programs.fish = {
     plugins = [];
@@ -61,7 +77,6 @@ in
   
   # kitty configuration
   programs.kitty = {
-    enable = true;
     font = {
       name = "0xProto";
       size = 10;
