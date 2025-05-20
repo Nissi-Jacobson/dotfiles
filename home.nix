@@ -18,7 +18,7 @@
  # gnome shell extensions
   pkgs.gnomeExtensions.blur-my-shell
   pkgs.gnomeExtensions.user-themes
-  pkgs.gnomeExtensions.transparent-top-bar
+  #pkgs.gnomeExtensions.transparent-top-bar
   pkgs.gnomeExtensions.caffeine
   pkgs.gnomeExtensions.just-perfection
   pkgs.gnomeExtensions.clipboard-history
@@ -26,6 +26,8 @@
   pkgs.gnomeExtensions.gnome-40-ui-improvements
   pkgs.gnomeExtensions.appindicator
   pkgs.gnomeExtensions.gsconnect
+  pkgs.gnomeExtensions.hide-top-bar
+  pkgs.gnomeExtensions.status-area-horizontal-spacing
  # end of gnome shells extensions
   ];
 
@@ -75,7 +77,7 @@
         "gnome-ui-tune@itstime.tech"
         "gsconnect@andyholmes.github.io"
         "just-perfection-desktop@just-perfection"
-        "transparent-top-bar@zhanghai.me"
+        #"transparent-top-bar@zhanghai.me"
         "user-theme@gnome-shell-extensions.gcampax.github.com"
         ];
       };
