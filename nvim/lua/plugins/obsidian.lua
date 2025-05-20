@@ -20,8 +20,8 @@ return {
   opts = {
     workspaces = {
       {
-        name = "",
-        path = "",
+        name = "brain-dump",
+        path = "~/Documents/brain-dump",
       },
     },
 
