@@ -90,16 +90,14 @@
         event-sounds = false;
       };
       "org/gnome/mutter".dynamic-workspaces = true;
-      "org/gnome/nautilus" = {
-        "preferences" = {
-          default-folder-viewer = "list-view";
-          migrated-gtk-settings = true;
-          recursive-search = "always";
-          searh-filter-time-type = "last-modified";
-          show-delete-permanently = true;
-          show-directory-item-count = "always";
-          show-image-thumbnails = "always";
-        };
+      "org/gnome/nautilus/preferences" = {
+        default-folder-viewer = "list-view";
+        migrated-gtk-settings = true;
+        recursive-search = "always";
+        searh-filter-time-type = "last-modified";
+        show-delete-permanently = true;
+        show-directory-item-count = "always";
+        show-image-thumbnails = "always";
       };
       "org/gnome/shell/extensions/blur-my-shell/hidetopbar".compatibility = true;
       "org/gnome/shell/extensions/blur-my-shell/panel".static-blur = false;
