@@ -33,8 +33,8 @@
 
  # adding dotfiles
   home.file = {
-    ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/nissi/dotfiles/nvim"
-  }
+    ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/nissi/dotfiles/nvim";
+  };
 
   # The home.sessionVariables option allows you to install Nix packages into your
   # sessionVariables
