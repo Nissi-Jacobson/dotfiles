@@ -75,16 +75,16 @@
       };
       "org/gnome/shell/extensions/blur-my-shell/hidetopbar".compatibility = false;
       "org/gnome/shell/extensions/blur-my-shell/panel".static-blur = false;
-      "/org/gnome/shell/extensions/blur-my-shell/applications" = {
+      "org/gnome/shell/extensions/blur-my-shell/applications" = {
         blur = true;
         blur-on-overview = true;
         enable-all = true;
       };
-      "/org/gnome/shell/extensions/gnome-ui-tune" = {
+      "org/gnome/shell/extensions/gnome-ui-tune" = {
         hide-search = true;
         increase-thumbnails-size = "200%";
       };
-      "/org/gnome/shell/extensions/status-area-horizontal-spacing".hpadding = 3;
+      "org/gnome/shell/extensions/status-area-horizontal-spacing".hpadding = 3;
       "org/gnome/shell/extensions/hidetopbar".mouse-sensitive = true;
       "org/gnome/desktop/interface" = {
         #show-battery-percentage = true;
@@ -98,9 +98,9 @@
         scaling-factor = 1;
         text-scaling-factor = 1;
       };
-      "/org/gnome/desktop/sound" = {
-          allow-volume-above-100-percent = true;
-          event-sounds = false;
+      "org/gnome/desktop/sound" = {
+        allow-volume-above-100-percent = true;
+        event-sounds = false;
       };
     };
   };
