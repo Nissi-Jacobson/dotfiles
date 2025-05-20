@@ -62,8 +62,8 @@ in
       #theme = "tokyonight-night";
       font-family = "0xproto";
       font-size = 10;
-      background_opacity = 0.69;
-      background_blur = true;
+      background-opacity = 0.69;
+      background-blur = true;
       focus-follows-mouse = true;
       quit-after-last-window-closed = true;
     };
