@@ -132,7 +132,6 @@
   pkgs.qbittorrent
   pkgs.dconf-editor
   pkgs.gnome-tweaks
-
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

@@ -29,6 +29,7 @@
   pkgs.gnomeExtensions.hide-top-bar
   pkgs.gnomeExtensions.status-area-horizontal-spacing
  # end of gnome shells extensions
+  pkgs.nerd-fonts._0xproto
   ];
 
  # adding dotfiles
@@ -41,6 +42,16 @@
   };
 
  # customizations
+  
+  # font config
+ # fonts = {
+ #   fontconfig.enable = true;
+ #   fontconfig.defaultFonts = {
+ #     monospace =  [0xproto Nerd Font Mono];
+ #     sansSerif =  [0xproto Nerd Font ];
+ #     serif = [0xproto Nerd Font ];
+ #   };
+ # };
 
   # bash customization
   programs.bash = {
