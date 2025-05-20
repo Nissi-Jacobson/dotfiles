@@ -80,9 +80,9 @@
         ];
       };
       "org/gnome/shell/extensons/blur-my-shell" = {
-        "./panel."blur type = "dynamic";
-        "./applications".blur on overview = true;
-        "./applications".enable all by default = true;
+        "./panel".blur-type = "dynamic";
+        "./applications".blur-on-overview = true;
+        "./applications".enable-all-by-default = true;
       };
       "org/gnome/desktop/interface".show-battery-percentage = true;
       
