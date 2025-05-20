@@ -73,6 +73,34 @@
         "user-theme@gnome-shell-extensions.gcampax.github.com"
         ];
       };
+      "org/gnome/desktop/interface" = {
+        #show-battery-percentage = true;
+        color-scheme = "prefer-dark";
+        cursor-size = 24;
+        cursor-theme = "Adwaita";
+        enable-animations = true;
+        enable-hot-corners = true;
+        font-name = "Noto Sans, 10";
+        #gtk-theme = "Adwaita";
+        scaling-factor = 1;
+        text-scaling-factor = 1;
+      };
+      "org/gnome/desktop/sound" = {
+        allow-volume-above-100-percent = true;
+        event-sounds = false;
+      };
+      "org/gnome/mutter".dynamic-workspaces = true;
+      "org/gnome/nautilus" = {
+        "preferences" = {
+          default-folder-viewer = "list-view";
+          migrated-gtk-settings = true;
+          recursive-search = "always";
+          searh-filter-time-type = "last-modified";
+          show-delete-permanently = true;
+          show-directory-item-count = "always";
+          show-image-thumbnails = "always";
+        };
+      };
       "org/gnome/shell/extensions/blur-my-shell/hidetopbar".compatibility = true;
       "org/gnome/shell/extensions/blur-my-shell/panel".static-blur = false;
       "org/gnome/shell/extensions/blur-my-shell/applications" = {
@@ -92,22 +120,6 @@
         mouse-sensitive = true;
         mouse-triggers-overview = false;
         show-in-overview = true;
-      };
-      "org/gnome/desktop/interface" = {
-        #show-battery-percentage = true;
-        color-scheme = "prefer-dark";
-        cursor-size = 24;
-        cursor-theme = "Adwaita";
-        enable-animations = true;
-        enable-hot-corners = true;
-        font-name = "Noto Sans, 10";
-        #gtk-theme = "Adwaita";
-        scaling-factor = 1;
-        text-scaling-factor = 1;
-      };
-      "org/gnome/desktop/sound" = {
-        allow-volume-above-100-percent = true;
-        event-sounds = false;
       };
     };
   };
