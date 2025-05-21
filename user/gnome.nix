@@ -90,5 +90,5 @@
         show-in-overview = true;
       };
     };
-  }
+  };
 }

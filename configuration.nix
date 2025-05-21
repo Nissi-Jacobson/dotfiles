@@ -102,6 +102,9 @@
   # install and setup direnv
   # programs.direnv.enable = true;
 
+ # enable fish
+ programs.fish.enable = true;
+
  # default shell for all users
   users.defaultUserShell = pkgs.fish;
 
@@ -139,6 +142,7 @@
   pkgs.ghostty
   pkgs.kitty
   pkgs.direnv 
+  pkgs.zed-editor
   ];
   
 
