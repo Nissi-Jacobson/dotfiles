@@ -18,13 +18,13 @@
   home.stateVersion = "24.11"; # edited to be the same with system packages
 
   home.packages = [
-  
+
   ];
 
 
  # adding dotfiles
   home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/nissi/dotfiles/nvim";
-  
+
   #  Session Environment Variables -> sessionVariables
   home.sessionVariables = {
   };

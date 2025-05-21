@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./packages.nix
     ];
 
   # Bootloader.
@@ -113,38 +114,6 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
-  pkgs.git
-  pkgs.vscodium
-  pkgs.neovim
-  pkgs.tor-browser
-  pkgs.kdePackages.kdenlive
-  pkgs.auto-cpufreq
-  pkgs.brave
-  pkgs.lutris
-  pkgs.lazygit
-  pkgs.fzf
-  pkgs.fd
-  pkgs.ripgrep-all
-  pkgs.kitty
-  pkgs.kittysay
-  pkgs.clang
-  pkgs.mpv
-  pkgs.qbittorrent
-  pkgs.dconf-editor
-  pkgs.gnome-tweaks
-  pkgs.obsidian
-  pkgs.firefox
-  pkgs.zsh
-  pkgs.fish
-  pkgs.ghostty
-  pkgs.kitty
-  pkgs.direnv 
-  pkgs.zed-editor
-  ];
-  
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
