@@ -95,18 +95,16 @@
     description = "Nissi Jacobson";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-#      kdePackages.kate
-    #  thunderbird
     ];
   };
 
   # install and setup direnv
-  # programs.direnv.enable = true;
+  programs.direnv.enable = true;
 
- # enable fish
- programs.fish.enable = true;
+  # enable fish
+  programs.fish.enable = true;
 
- # default shell for all users
+  # default shell for all users
   users.defaultUserShell = pkgs.fish;
 
   # Allow unfree packages
