@@ -7,6 +7,7 @@
     ./gnome.nix
     ./sh.nix
     ./apps/default.nix
+    ./home-packages.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should

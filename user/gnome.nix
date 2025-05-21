@@ -2,6 +2,8 @@
 
 {
   home.packages = with pkgs; [
+    dconf-editor
+    gnome-tweaks
     gnomeExtensions.blur-my-shell
     gnomeExtensions.user-themes
     gnomeExtensions.caffeine
@@ -14,7 +16,6 @@
     gnomeExtensions.hide-top-bar
     gnomeExtensions.status-area-horizontal-spacing
     gnomeExtensions.hibernate-status-button
-    _0xproto
   ];
 
   # gnome customization
