@@ -13,6 +13,7 @@
     ghostty
     direnv
     nodePackages.nodejs
+    wl-clipboard-rs
   ];
 }
 
