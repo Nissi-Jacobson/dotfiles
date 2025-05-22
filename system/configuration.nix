@@ -107,6 +107,9 @@
   # default shell for all users
   users.defaultUserShell = pkgs.fish;
 
+  # disabling xterm
+  # programs.xterm.enable = false;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
 

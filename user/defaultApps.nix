@@ -1,7 +1,9 @@
 { config, pkgs, ... }:
 
 {
-    xdg.mimeApps = {
+  xdg = {
+    enable = true;
+    mimeApps = {
       enable = true;
       defaultApplications = {
         "text/html" = "brave-browser.desktop";
@@ -17,6 +19,8 @@
           "mpv.desktop"
         ];
         "text" = "nvim.desktop";
+        "x-scheme-handler/terminal" = "ghostty.desktop";
       };
     };
+  };
 }

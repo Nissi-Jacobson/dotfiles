@@ -31,6 +31,7 @@
           "extension-list@tu.berry"
           #"gnome-ui-tune@itstime.tech"
           "gsconnect@andyholmes.github.io"
+          "hibernate-status@dromi"
           "hidetopbar@mathieu.bidon.ca"
           "just-perfection-desktop@just-perfection"
           "status-area-horizontal-spacing@mathematical.coffee.gmail.com"

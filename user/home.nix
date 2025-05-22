@@ -7,7 +7,6 @@
     ./gnome.nix
     ./sh.nix
     ./apps/default.nix
-    #./home-packages.nix
     ./qutebrowser.nix
     ./defaultApps.nix
   ];
@@ -23,7 +22,9 @@
   home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/nissi/dotfiles/nvim";
 
   #  Session Environment Variables -> sessionVariables
-  home.sessionVariables = {};
+  home.sessionVariables = {
+    TERMINAL = "ghostty";
+  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
