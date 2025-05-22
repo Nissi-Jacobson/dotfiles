@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  home-manager.users.myuser = {
     xdg.mimeApps = {
       enable = true;
       defaultApplications = {
@@ -17,8 +16,7 @@
         "video" = [
           "mpv.desktop"
         ];
-        "text" = "nvim.desktop"
+        "text" = "nvim.desktop";
       };
     };
-  };
 }
