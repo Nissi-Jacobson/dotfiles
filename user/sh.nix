@@ -6,6 +6,9 @@ let
     la = "ls -a";
     lal = "ls -al";
     ".." = "cd ..";
+    dotnvim = "cd ~/dotfiles/ && nvim";
+    obsnvim = "cd ~/Documents/brain-dump/ && nvim";
+    codenvim = "cd ~/Documents/codes && nvim";
   };
 in
 
