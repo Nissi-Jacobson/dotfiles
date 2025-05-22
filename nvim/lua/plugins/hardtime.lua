@@ -3,6 +3,5 @@ return {
    lazy = false,
    dependencies = { "MunifTanjim/nui.nvim" },
    opts = {
-    enable = false;
   },
-},
+}

@@ -68,7 +68,7 @@
           # Please see https://wiki.hyprland.org/Configuring/Tearing/ before you turn this on
           allow_tearing = false;
       
-          layout = dwindle;
+          layout = "dwindle";
       };
       
       # https://wiki.hyprland.org/Configuring/Variables/#decoration
@@ -148,7 +148,7 @@
       
       # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
       master = {
-          new_status = master;
+          new_status = "master";
       };
       
       # https://wiki.hyprland.org/Configuring/Variables/#misc
