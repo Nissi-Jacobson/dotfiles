@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [
+  home.Packages = with pkgs; [
     wofi
     waybar
     (waybar.overrideAttrs (oldAttrs: {
