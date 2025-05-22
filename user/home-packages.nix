@@ -21,5 +21,6 @@
     obsidian
     zed-editor
     unzip
+    qutebrowser
   ];
 }

@@ -2,21 +2,23 @@
 
 let
   myShellAliases = {
-    "ll" = "ls -l";
-    "la" = "ls -a";
-    "lal" = "ls -al";
+    ll = "ls -l";
+    la = "ls -a";
+    lal = "ls -al";
     ".." = "cd ..";
-    "dotnvim" = "cd ~/dotfiles/ && nvim";
-    "obsnvim" = "cd ~/Documents/brain-dump/ && nvim";
-    "codenvim" = "cd ~/Documents/codes && nvim";
+    dotnvim = "cd ~/dotfiles/ && nvim";
+    obsnvim = "cd ~/Documents/brain-dump/ && nvim";
+    codenvim = "cd ~/Documents/codes && nvim";
   };
+  myShellAbbrs = myShellAliases;
 in
 
 {
   # fish customization
   programs.fish = {
     plugins = [];
-    shellAliases = myShellAliases;
+    shellAbbrs = myShellAliases;
+    preferAbbrs = true;
   };
 
   # zsh customization
