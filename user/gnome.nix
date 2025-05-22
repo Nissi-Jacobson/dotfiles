@@ -20,7 +20,6 @@
 
   # gnome customization
   dconf = {
-      enable = true;
       settings = {
         "org/gnome/shell" = {
           disable-user-extensions = false;

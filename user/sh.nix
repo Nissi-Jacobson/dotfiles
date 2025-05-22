@@ -19,6 +19,7 @@ in
     plugins = [];
     shellAbbrs = myShellAliases;
     preferAbbrs = true;
+    shellAliases = myShellAliases;
   };
 
   # zsh customization

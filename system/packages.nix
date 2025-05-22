@@ -37,6 +37,8 @@
     zed-editor
     unzip
     qutebrowser
+    feh
+    qimgv
   ];
 }
 
