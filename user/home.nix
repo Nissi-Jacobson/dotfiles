@@ -4,11 +4,11 @@
 
   # importing modules
   imports = [
-    #./gnome.nix
-    #./sh.nix
-    #./apps/default.nix
+    ./gnome.nix
+    ./sh.nix
+    ./apps/default.nix
     #./home-packages.nix
-    #./qutebrowser.nix
+    ./qutebrowser.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should manage.

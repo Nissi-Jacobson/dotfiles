@@ -107,9 +107,6 @@
   # default shell for all users
   users.defaultUserShell = pkgs.fish;
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
   # List packages installed in system profile. To search, run:
   # $ nix search wget
 
