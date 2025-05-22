@@ -4,7 +4,6 @@
 
   # ghostty customization
   programs.ghostty = {
-    enable = true;
     #clearDefaultKeybinds = true;
     #installVimSyntax = true;
     settings = {
