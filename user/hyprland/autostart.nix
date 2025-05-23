@@ -17,7 +17,7 @@
         "brightnessctl set 1%"
         #$terminal
         "nm-applet"
-        "waybar"
+        #"waybar"
         "hyprpaper"
       ];
     };

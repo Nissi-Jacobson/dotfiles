@@ -14,6 +14,7 @@ settings = {
 bind = [ 
   "$mainMod, Return, exec, $terminal"
   "$mainMod, Q, killactive,"
+  "$mainMod, W, exec, pkill -SIGUSR1 waybar || waybar"
   "$mainMod, M, exit,"
   "$mainMod, E, exec, $fileManager"
   "$mainMod, V, togglefloating,"
