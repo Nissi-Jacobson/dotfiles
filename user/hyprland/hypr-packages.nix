@@ -9,5 +9,6 @@
     hyprpaper
     kitty
     nwg-look
+    hyprpaper
   ];
 }
