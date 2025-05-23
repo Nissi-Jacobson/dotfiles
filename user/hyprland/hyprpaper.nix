@@ -4,8 +4,8 @@
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload  = "../../speedmeter.webp";
-      wallpaper = " , ../../speedmeter.webp";
+      preload  = " /home/nissi/dotfiles/landscape.jpg";
+      wallpaper = " , /home/nissi/dotfiles/landscape.jpg";
     };
   };
 }

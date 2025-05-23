@@ -4,11 +4,8 @@
 
   # importing modules
   imports = [
-    ./gnome.nix
-    ./sh.nix
     ./apps/default.nix
-    ./qutebrowser.nix
-    ./defaultApps.nix
+    ./gnome/default.nix
     ./hyprland/hyprland.nix
   ];
 
