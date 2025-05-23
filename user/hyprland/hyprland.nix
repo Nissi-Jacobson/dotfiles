@@ -24,6 +24,6 @@
     ../apps/default.nix
 #######################
     #SCRATCH PADS#
-    ./scratchpadInit.nix
+    #./scratchpadInit.nix
   ];
 }
