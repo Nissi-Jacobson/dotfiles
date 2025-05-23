@@ -9,6 +9,6 @@
       
       # See https://wiki.hyprland.org/Configuring/Monitors/
       monitor = ",preferred,auto,1.0";
-    }
-  }
+    };
+  };
 }
