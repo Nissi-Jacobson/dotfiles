@@ -8,6 +8,7 @@
     ./autostart.nix
     ./environment-variables.nix
     ./look-and-feel.nix
+    ./input.nix
     ./keybindings.nix
     ./hypr-packages.nix
   ];
