@@ -8,6 +8,5 @@
     libnotify
     hyprpaper
     kitty
-
   ];
 }
