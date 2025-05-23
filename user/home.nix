@@ -4,7 +4,7 @@
 
   # importing modules
   imports = [
-    #./gnome/default.nix
+    ./gnome/default.nix
     ./hyprland/hyprland.nix
   ];
 
