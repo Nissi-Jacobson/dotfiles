@@ -10,8 +10,8 @@
       # https://wiki.hyprland.org/Configuring/Variables/#input
       input = {
         kb_layout = "us";
-        kb_variant = "colemak";
-        #kb_model =
+        kb_variant = "colemak, qwerty";
+        kb_model = "grp:win_space_toggle";
         #kb_options =
         #kb_rules =
     
