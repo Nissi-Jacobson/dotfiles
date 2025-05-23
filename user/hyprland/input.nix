@@ -11,8 +11,8 @@
       input = {
         kb_layout = "us";
         kb_variant = "colemak, us";
-        kb_model = "grp:win_space_toggle";
-        #kb_options =
+        #kb_model = 
+        kb_options = "grp:win_space_toggle";
         #kb_rules =
     
         follow_mouse = 1;
