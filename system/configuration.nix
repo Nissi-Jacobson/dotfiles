@@ -61,8 +61,16 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
   
-  # Comment/Uncomment to toggle Hyprland
-  programs.hyprland.enable = true;
+  # Comment / Uncomment to toggle 
+  programs = {
+    direnv.enable = true;
+    fish.enable = true;
+    nm-applet.enable = true;
+    hyprland.enable = true;
+  };
+
+  # default shell for all users
+  users.defaultUserShell = pkgs.fish;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -99,15 +107,6 @@
     packages = with pkgs; [
     ];
   };
-
-  # install and setup direnv
-  programs.direnv.enable = true;
-
-  # enable fish
-  programs.fish.enable = true;
-
-  # default shell for all users
-  users.defaultUserShell = pkgs.fish;
 
   # disabling xterm
   # programs.xterm.enable = false;

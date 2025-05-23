@@ -3,6 +3,7 @@
 {
   wayland.windowManager.hyprland.enable = true;
   imports = [
+######################
     #HYPRLAND STUFF#
     ./monitor.nix
     ./hypr-default-apps.nix
@@ -22,5 +23,7 @@
     #DEFAULT APPS#
     ../apps/default.nix
 #######################
+    #SCRATCH PADS#
+    ./scratchpadInit.nix
   ];
 }

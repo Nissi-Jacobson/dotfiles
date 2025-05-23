@@ -1,6 +1,9 @@
 {config, pkgs, ...}:
 
 {
+  services = {
+    blueman-applet.enable = true;
+  };
   wayland.windowManager.hyprland = {
     settings = {
       #################

@@ -10,5 +10,7 @@
     kitty
     nwg-look
     hyprpaper
+    blueman
+    brightnessctl
   ];
 }

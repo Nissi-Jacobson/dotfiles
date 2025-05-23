@@ -39,6 +39,7 @@
     qutebrowser
     feh
     qimgv
+    networkmanagerapplet
   ];
 }
 

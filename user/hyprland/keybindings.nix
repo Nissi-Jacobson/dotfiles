@@ -12,12 +12,12 @@ settings = {
 
 # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
 bind = [ 
-  "$mainMod, Q, exec, $terminal"
-  "$mainMod, C, killactive,"
+  "$mainMod, Return, exec, $terminal"
+  "$mainMod, Q, killactive,"
   "$mainMod, M, exit,"
   "$mainMod, E, exec, $fileManager"
   "$mainMod, V, togglefloating,"
-  "$mainMod, R, exec, $menu"
+  "$mainMod, A, exec, $menu"
   "$mainMod, P, pseudo, # dwindle"
   "$mainMod, J, togglesplit, # dwindle"
   
@@ -54,6 +54,8 @@ bind = [
   # Example special workspace (scratchpad)
   "$mainMod, S, togglespecialworkspace, magic"
   "$mainMod SHIFT, S, movetoworkspace, special:magic"
+  "$mainMod, R, togglespecialworkspace, Recent-Tabs"
+  "$mainMod SHIFT, R, movetoworkspace, special:Recent-Tabs"
   
   # Scroll through existing workspaces with mainMod + scroll
   "$mainMod, mouse_down, workspace, e+1"
