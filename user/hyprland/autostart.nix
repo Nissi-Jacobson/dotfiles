@@ -14,6 +14,7 @@
       # Or execute your favorite apps at launch like this:
 
       exec-once = [
+        "brightnessctl set 1%"
         #$terminal
         "nm-applet"
         "waybar"

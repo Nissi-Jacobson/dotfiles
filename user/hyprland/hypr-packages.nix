@@ -12,5 +12,6 @@
     hyprpaper
     blueman
     brightnessctl
+    pywal
   ];
 }
