@@ -40,6 +40,8 @@
     feh
     qimgv
     networkmanagerapplet
+    font-awesome
+    nerdfonts
   ];
 }
 
