@@ -8,5 +8,6 @@
     libnotify
     hyprpaper
     kitty
+    nwg-look
   ];
 }

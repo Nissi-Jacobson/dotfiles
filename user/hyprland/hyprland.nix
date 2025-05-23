@@ -11,6 +11,6 @@
     ./input.nix
     ./keybindings.nix
     ./hypr-packages.nix
-    ./nwg-look.nix
+    ./gtkSettings.nix
   ];
 }
