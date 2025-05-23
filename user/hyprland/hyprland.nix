@@ -12,5 +12,6 @@
     ./keybindings.nix
     ./hypr-packages.nix
     ./gtkSettings.nix
+    ./hyprpaper.nix
   ];
 }
