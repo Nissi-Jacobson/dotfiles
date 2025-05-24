@@ -19,7 +19,7 @@
   
   qt = {
     enable = true;
-    platformTheme = "qt6ct";
+    platformTheme.name = "qt6ct";
     style.name = "Tokyonight-Dark";
   };
 }
