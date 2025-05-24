@@ -13,7 +13,7 @@
   home.homeDirectory = "/home/nissi";
 
   # home.stateVersion = "25.05"; # DO NOT EDIT
-  home.stateVersion = "24.11"; # edited to be the same with system packages
+  home.stateVersion = "25.05"; # edited to be the same with system packages
 
  # adding dotfiles
   home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/nissi/dotfiles/nvim";

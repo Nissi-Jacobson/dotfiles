@@ -20,13 +20,13 @@
     #DEFAULT APPS#
     ../apps/default.nix
 #####
-    #SCRATCH PADS#
-    #./scratchpadInit.nix
-#####
     #THEMES#
     ./hypr-themes.nix
 #####
     #WAYBAR#
     ./waybar.nix
+#####
+    #APP THEMES#
+    ../apps/default.nix
   ];
 }

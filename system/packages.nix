@@ -18,7 +18,6 @@
     direnv
     nodePackages.nodejs
     wl-clipboard
-    _0xproto
     vscodium
     tor-browser
     mpv
@@ -42,6 +41,8 @@
     networkmanagerapplet
     font-awesome
     nerdfonts
+    neofetch
+    fastfetch
   ];
 }
 

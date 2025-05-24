@@ -67,10 +67,10 @@
     fish.enable = true;
     nm-applet.enable = true;
     hyprland.enable = true;
-    kde.connect = {
-      enable = true;
-      package = pkgs.gnomeExtensions.gsconnect;
-    };
+#    kde.connect = {
+#      enable = true;
+#      package = pkgs.gnomeExtensions.gsconnect;
+#    };
   };
 
   # default shell for all users
@@ -112,6 +112,8 @@
     ];
   };
 
+  # Enable Font Config
+  fonts.fontconfig.enable = true;
   # disabling xterm
   # programs.xterm.enable = false;
 
@@ -143,6 +145,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "24.11"; # Did you read the comment?
+  system.stateVersion = "25.05"; # Did you read the comment?
 
 }
