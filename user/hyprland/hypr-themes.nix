@@ -16,4 +16,10 @@
 #      package = pkgs.bibata-cursors;
 #    };
   };
+  
+  qt = {
+    enable = true;
+    platformTheme = "qt6ct";
+    style.name = "Tokyonight-Dark";
+  };
 }

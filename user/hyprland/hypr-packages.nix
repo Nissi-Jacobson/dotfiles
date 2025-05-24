@@ -14,5 +14,6 @@
     blueman
     brightnessctl
     pywal
+    qt6ct
   ];
 }

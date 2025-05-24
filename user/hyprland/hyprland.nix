@@ -23,8 +23,8 @@
     #SCRATCH PADS#
     #./scratchpadInit.nix
 #####
-    #GTK THEME#
-    ./hypr-gtk.nix
+    #THEMES#
+    ./hypr-themes.nix
 #####
     #WAYBAR#
     ./waybar.nix
