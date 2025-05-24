@@ -39,8 +39,9 @@
     feh
     qimgv
     networkmanagerapplet
-    font-awesome
-    nerdfonts
+    #font-awesome
+    #nerd-fonts._0xproto
+    _0xproto
     neofetch
     fastfetch
   ];

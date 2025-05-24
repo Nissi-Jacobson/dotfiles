@@ -113,7 +113,8 @@
   };
 
   # Enable Font Config
-  fonts.fontconfig.enable = true;
+  #fonts.fontconfig.enable = true;
+
   # disabling xterm
   # programs.xterm.enable = false;
 
