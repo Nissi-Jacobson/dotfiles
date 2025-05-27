@@ -19,9 +19,8 @@
   home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/nissi/dotfiles/nvim";
 
   #  Session Environment Variables -> sessionVariables
-#  home.sessionVariables = {
-#    TERMINAL = "ghostty";
-#  };
+  home.sessionVariables = {
+  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

@@ -5,21 +5,13 @@
     enable = true;
     gtk3.extraConfig.gtk-decoration-layout = "menu:";
     theme = {
-      name = "Tokyonight-Dark";
-      package = pkgs.tokyo-night-gtk;
+      name = "Sweet-Dark-v40";
     };
     iconTheme = {
-      name = "Tokyonight-Dark";
+      name = "Candy";
     };
-#    cursorTheme = { 
-#      name = gtkCursorTheme;
-#      package = pkgs.bibata-cursors;
-#    };
-  };
-  
-  qt = {
-    enable = true;
-    platformTheme.name = "qt6ct";
-    style.name = "Tokyonight-Dark";
+    cursorTheme = { 
+      name = "layan-cursors";
+    };
   };
 }

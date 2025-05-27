@@ -40,8 +40,11 @@
     qimgv
     networkmanagerapplet
     #font-awesome
-    #nerd-fonts._0xproto
+    nerd-fonts._0xproto
     _0xproto
+    nerd-fonts.jetbrains-mono
+    jetbrains-mono
+    nerd-fonts.symbols-only
     neofetch
     fastfetch
   ];

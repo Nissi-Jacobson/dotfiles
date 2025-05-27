@@ -13,6 +13,11 @@
     blueman
     brightnessctl
     pywal
-    qt6ct
+    kdePackages.qtstyleplugin-kvantum
+    sweet
+    sweet-nova
+    sweet-folders
+    candy-icons
+    layan-cursors
   ];
 }

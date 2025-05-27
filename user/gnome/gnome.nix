@@ -43,7 +43,7 @@
           #show-battery-percentage = true;
           color-scheme = "prefer-dark";
           cursor-size = 24;
-          cursor-theme = "Adwaita";
+          #cursor-theme = "Adwaita";
           enable-animations = true;
           enable-hot-corners = true;
           font-name = "0xProto, 10";

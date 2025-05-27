@@ -16,6 +16,7 @@
         modules-right = [ 
           "tray" 
           "network" 
+          "backlight"
           "pulseaudio" 
           "battery"
         ];
@@ -134,14 +135,13 @@
       * {
         border: none;
         border-radius: 0;
-        font-family: "0xProto", monospace;
+        font-family: "0xProto, JetBrains Mono Nerd Font" ;
         font-size: 13px;
         min-height: 0;
       }
 
       window#waybar {
-        background-color: rgba(43, 48, 59, 0.8);
-        border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+        background-color: transparent; 
         color: #ffffff;
         transition-property: background-color;
         transition-duration: .5s;
@@ -155,7 +155,6 @@
         padding: 0 5px;
         background-color: transparent;
         color: #ffffff;
-        border-bottom: 3px solid transparent;
       }
 
       #workspaces button:hover {
