@@ -47,6 +47,8 @@
     nerd-fonts.symbols-only
     neofetch
     fastfetch
+    kdePackages.dolphin
+    xfce.thunar
   ];
 }
 

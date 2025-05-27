@@ -14,7 +14,6 @@
     brightnessctl
     pywal
     kdePackages.qtstyleplugin-kvantum
-    libsForQt5.qt5ct
     sweet
     sweet-nova
     sweet-folders

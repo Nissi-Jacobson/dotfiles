@@ -12,7 +12,7 @@
       env = [
         "XCURSOR_SIZE,24"
         "HYPRCURSOR_SIZE,24"
-        "QT_QPA_PLATFORMTHEME,qt5ct"
+        "QT_QPA_PLATFORMTHEME,qtct"
         "QT_STYLE_OVERRIDE,kvantum"
       ];
     };

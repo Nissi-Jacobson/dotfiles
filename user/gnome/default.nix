@@ -5,5 +5,6 @@
     ./gnome.nix
     ./defaultApps.nix
     ../apps/default.nix
+    ../theme.nix
   ];
 }

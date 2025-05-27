@@ -8,7 +8,7 @@
       name = "Sweet-Dark-v40";
     };
     iconTheme = {
-      name = "Candy";
+      name = "Candy-Icons";
     };
     cursorTheme = { 
       name = "layan-cursors";
@@ -17,9 +17,9 @@
   
   qt = {
     enable = true;
-    platformTheme.name = "qtct";
+    platformTheme.name = "kvantum";
     style = {
-      name = "kvantum";
+      name = "Sweet-Dark-v40";
     };
   };
 }

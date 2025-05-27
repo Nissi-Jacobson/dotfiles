@@ -21,7 +21,7 @@
     ../apps/default.nix
 #####
     #THEMES#
-    ./hypr-themes.nix
+    ../theme.nix
 #####
     #WAYBAR#
     ./waybar.nix

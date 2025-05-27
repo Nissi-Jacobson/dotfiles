@@ -41,13 +41,13 @@
         };
         "org/gnome/desktop/interface" = {
           #show-battery-percentage = true;
-          color-scheme = "prefer-dark";
-          cursor-size = 24;
+          #color-scheme = "prefer-dark";
+          #cursor-size = 24;
           #cursor-theme = "Adwaita";
           enable-animations = true;
           enable-hot-corners = true;
-          font-name = "0xProto, 10";
-          monospace-font-name = "0xProto 10";
+          #font-name = "0xProto, 10";
+          #monospace-font-name = "0xProto 10";
           #gtk-theme = "Adwaita";
           scaling-factor = 1;
           text-scaling-factor = 1;
