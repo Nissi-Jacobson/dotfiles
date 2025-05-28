@@ -11,7 +11,7 @@
         spacing = 4;
         
         # Module configuration
-        modules-left = [ "hyprland/workspaces" "hyprland/mode" "cpu" "memory" "temperature" "hyprland/window" ];
+        modules-left = [ "hyprland/workspaces" "cpu" "memory" "temperature" "hyprland/window" ];
         modules-center = [ "clock" ];
         modules-right = [ 
           "tray" 

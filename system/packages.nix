@@ -47,9 +47,14 @@
     nerd-fonts.symbols-only
     neofetch
     fastfetch
-    kdePackages.dolphin
     xfce.thunar
     ly
+    sweet
+    sweet-nova
+    zip 
+    candy-icons
+    pandoc
+    libreoffice-still
   ];
 }
 
