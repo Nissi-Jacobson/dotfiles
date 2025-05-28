@@ -49,6 +49,7 @@
     fastfetch
     kdePackages.dolphin
     xfce.thunar
+    ly
   ];
 }
 

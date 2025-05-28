@@ -65,13 +65,13 @@
 
         # CPU
         cpu = {
-          format = "{usage}% ";
+          format = " {usage}%";
           tooltip = false;
         };
 
         # Memory
         memory = {
-          format = "{}% ";
+          format = " {}%";
         };
 
         # Temperature
@@ -81,7 +81,7 @@
           critical-threshold = 80;
           format-critical = "{temperatureC}°C {icon}";
           format = "{temperatureC}°C {icon}";
-          format-icons = ["" "" ""];
+          format-icons = ["" "" ""];
         };
 
         # Battery
@@ -101,34 +101,42 @@
         # Audio
         pulseaudio = {
           format = "{volume}% {icon} {format_source}";
-          format-bluetooth = "{volume}% {icon} {format_source}";
-          format-bluetooth-muted = "󰝟 {icon} {format_source}";
+          format-bluetooth = "{volume}% {icon}󰂯 {format_source}";
+          format-bluetooth-muted = "󰝟 {icon}󰂯 {format_source}";
           format-muted = "󰝟 {format_source}";
-          format-source = "{volume}% ";
-          format-source-muted = "";
+          format-source = "{volume}%󰍬 ";
+          format-source-muted = "󰍭 ";
           format-icons = {
-            headphone = "";
+            headphone = "󰋋 ";
             hands-free = "";
-            headset = "";
-            phone = "";
+            headset = "󰋎 ";
+            phone = " ";
             portable = "";
-            car = "";
-            default = ["" "" ""];
+            car = " ";
+            default = [" " "󱄠 " " "];
+            microphone = " ";
           };
           on-click = "pavucontrol";
         };
 
         # Network
         network = {
-          format-wifi = "{signalStrength}% ";
-          format-ethernet = "{ipaddr}/{cidr} ";
+          format-wifi = " {signalStrength}%";
+          format-ethernet = " {ipaddr}/{cidr}";
           tooltip-format = "{ifname} via {gwaddr} ";
           format-linked = "{ifname} (No IP) ";
           format-disconnected = "Disconnected ⚠";
           format-alt = "{ifname}: {ipaddr}/{cidr}";
         };
+
+        # BackLight
+        #backlight = {
+        #  format = "{percentage}% {icon}";
+        #  format-icons = ["󰃚 " "󰃛 " "󰃜 " "󰃝 " "󰃞 " "󰃟 " "󰃠 "];
+        #};
       };
     };
+
 
     # Waybar styling with 0xProto Nerd Font and transparency
     style = ''
@@ -158,12 +166,12 @@
       }
 
       #workspaces button:hover {
-        background: rgba(0, 0, 0, 0.2);
+        background: transparent;
         box-shadow: inset 0 -3px #ffffff;
       }
 
       #workspaces button.active {
-        background-color: #64727D;
+        background-color: transparent;
         border-bottom: 3px solid #ffffff;
       }
 

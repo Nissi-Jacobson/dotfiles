@@ -49,18 +49,30 @@
     LC_TIME = "en_IN";
   };
 
-  # Enable the X11 windowing system.
-  # You can disable this if you're only using the Wayland session.
-  services.xserver.enable = true;
+  # All services
+  # List services that you want to enable:
+  services = {
+    xserver = {
+      # Enable the X11 windowing system.
+      # You can disable this if you're only using the Wayland session.
+      enable = false;
+     # Configure keymap in X11
+      xkb = {
+        layout = "us";
+        variant = "colemak";
+      };
+   };
+    # Enable Ly terminal display manager
+    displayManager.ly.enable = true;
+    # Enable CUPS to print documents.
+    printing.enable = true;
+    # Enable touchpad support (enabled default in most desktopManager).
+    libinput.enable = true;
+    # Enable Blueman
+    blueman.enable = true;
+  };
 
-  # Enable the KDE Plasma Desktop Environment.
-  # services.displayManager.sddm.enable = true;
-  # services.desktopManager.plasma6.enable = true;
 
-  # Comment/Uncomment to toggle Gnome Desktop Environment
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-  
   # Comment / Uncomment to toggle 
   programs = {
     direnv.enable = true;
@@ -76,17 +88,9 @@
   # default shell for all users
   users.defaultUserShell = pkgs.fish;
 
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "colemak";
-  };
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -99,9 +103,6 @@
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   };
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  services.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.nissi = {
@@ -129,7 +130,6 @@
   #   enableSSHSupport = true;
   # };
 
-  # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;

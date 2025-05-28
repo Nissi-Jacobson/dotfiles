@@ -14,11 +14,12 @@
       # Or execute your favorite apps at launch like this:
 
       exec-once = [
-        "brightnessctl set 1%"
+        "brightnessctl set 0%"
         #$terminal
         "nm-applet"
         #"waybar"
         "hyprpaper"
+        "blueman-applet"
       ];
     };
   };
