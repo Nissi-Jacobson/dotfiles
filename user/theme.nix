@@ -8,7 +8,7 @@
       name = "Sweet-Dark-v40";
     };
     iconTheme = {
-      name = "Candy-Icons";
+      name = "Candy";
     };
     cursorTheme = { 
       name = "layan-cursors";
