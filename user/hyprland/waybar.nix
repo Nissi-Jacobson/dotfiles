@@ -37,9 +37,9 @@
             "8" = "8";
             "9" = "9";
             "10" = "10";
-            urgent = "";
-            focused = "";
-            default = "";
+            urgent = " ";
+            focused = " ";
+            default = " ";
           };
         };
 
@@ -108,10 +108,10 @@
           format-source-muted = "󰍭 ";
           format-icons = {
             headphone = "󰋋 ";
-            hands-free = "";
+            hands-free = " ";
             headset = "󰋎 ";
             phone = " ";
-            portable = "";
+            portable = "󱄟 ";
             car = " ";
             default = [" " "󱄠 " " "];
             microphone = " ";
@@ -143,7 +143,7 @@
       * {
         border: none;
         border-radius: 0;
-        font-family: "0xProto, JetBrains Mono Nerd Font" ;
+        font-family: "0xProto", "JetBrains Mono Nerd Font" ;
         font-size: 13px;
         min-height: 0;
       }
