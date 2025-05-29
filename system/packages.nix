@@ -3,6 +3,15 @@
 {
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
+  # Download Fonts
+  fonts.packages = with pkgs;[
+    nerd-fonts._0xproto
+    _0xproto
+    nerd-fonts.jetbrains-mono
+    jetbrains-mono
+    #nerd-fonts.symbols-only
+  ];
   
   # Downloading packages
   environment.systemPackages = with pkgs; [
@@ -40,11 +49,6 @@
     qimgv
     networkmanagerapplet
     #font-awesome
-    nerd-fonts._0xproto
-    _0xproto
-    nerd-fonts.jetbrains-mono
-    jetbrains-mono
-    nerd-fonts.symbols-only
     neofetch
     fastfetch
     xfce.thunar

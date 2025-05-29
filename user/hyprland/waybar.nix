@@ -143,7 +143,7 @@
       * {
         border: none;
         border-radius: 0;
-        font-family: "0xProto", "JetBrains Mono Nerd Font" ;
+        font-family: "0xProto, JetBrains Mono Nerd Font" ;
         font-size: 13px;
         min-height: 0;
       }
