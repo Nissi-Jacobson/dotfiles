@@ -59,6 +59,7 @@
     candy-icons
     pandoc
     libreoffice-still
+    onlyoffice-bin
   ];
 }
 
