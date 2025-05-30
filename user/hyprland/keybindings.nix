@@ -26,6 +26,9 @@ bind = [
   # ScreenShot
   " , PRINT, exec, hyprshot -m window"
   "$shiftMod, S, exec, hyprshot -m region"
+
+  # Hyprlock
+  "$mainMod, L, exec, hyprlock"
   
   # Move focus with mainMod + arrow keys
   "$mainMod, left, movefocus, l"

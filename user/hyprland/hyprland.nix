@@ -29,5 +29,8 @@
 #####
     #APP THEMES#
     ../apps/default.nix
+#####
+    #Lock Screen#
+    ./hyprlock.nix
   ];
 }

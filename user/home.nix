@@ -17,6 +17,9 @@
 
  # adding dotfiles
   home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/nissi/dotfiles/nvim";
+  home.file.".config/hypr/hyprshot.conf".text = ''
+    save_path = "~/Pictures/Screenshots/";
+  '';
 
   #  Session Environment Variables -> sessionVariables
   home.sessionVariables = {

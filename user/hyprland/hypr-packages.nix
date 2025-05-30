@@ -17,5 +17,6 @@
     #sweet-folders
     layan-cursors
     hyprshot
+    hyprlock
   ];
 }
