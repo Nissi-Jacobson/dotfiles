@@ -16,5 +16,6 @@
     kdePackages.qtstyleplugin-kvantum
     #sweet-folders
     layan-cursors
+    hyprshot
   ];
 }
