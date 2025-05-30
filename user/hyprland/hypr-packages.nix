@@ -18,5 +18,6 @@
     layan-cursors
     hyprshot
     hyprlock
+    hypridle
   ];
 }

@@ -32,5 +32,8 @@
 #####
     #Lock Screen#
     ./hyprlock.nix
+#####
+    #HYPRIDLE#
+    ./hypridle.nix
   ];
 }
