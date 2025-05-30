@@ -24,8 +24,8 @@ bind = [
   "$mainMod, J, togglesplit, # dwindle"
 
   # ScreenShot
-  " , PRINT, exec, hyprshot -m output"
-  "$shiftMod, S, exec, hyprland -m region"
+  " , PRINT, exec, hyprshot -m window"
+  "$shiftMod, S, exec, hyprshot -m region"
   
   # Move focus with mainMod + arrow keys
   "$mainMod, left, movefocus, l"
@@ -60,8 +60,8 @@ bind = [
   "$mainMod SHIFT, 0, movetoworkspace, 10"
   
   # Example special workspace (scratchpad)
-  "$mainMod, S, togglespecialworkspace, magic"
-  "$mainMod SHIFT, S, movetoworkspace, special:magic"
+  #"$mainMod, S, togglespecialworkspace, magic"
+  #"$mainMod SHIFT, S, movetoworkspace, special:magic"
   "$mainMod, R, togglespecialworkspace, Recent-Tabs"
   "$mainMod SHIFT, R, movetoworkspace, special:Recent-Tabs"
   
