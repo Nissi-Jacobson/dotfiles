@@ -60,6 +60,8 @@
     pandoc
     libreoffice-still
     onlyoffice-bin
+    gvfs
+    kdePackages.dolphin
   ];
 }
 

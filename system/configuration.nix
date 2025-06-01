@@ -61,7 +61,8 @@
         layout = "us";
         variant = "colemak";
       };
-   };
+
+    };
     # Enable Ly terminal display manager
     displayManager.ly.enable = true;
     # Enable CUPS to print documents.
@@ -70,6 +71,20 @@
     libinput.enable = true;
     # Enable Blueman
     blueman.enable = true;
+    # Pulse Audio
+    pulseaudio.enable = false;
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+      jack.enable = true;
+      # use the example session manager (no others are packaged yet so this is enabled by default,
+      # no need to redefine it in your config for now)
+      #media-session.enable = true;
+    };
+    # Enable gvfs
+    gvfs.enable = true;
   };
 
 
@@ -88,21 +103,8 @@
   # default shell for all users
   users.defaultUserShell = pkgs.fish;
 
-
   # Enable sound with pipewire.
-  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    jack.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
-  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.nissi = {
