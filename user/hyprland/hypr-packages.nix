@@ -7,7 +7,6 @@
     dunst
     libnotify
     hyprpaper
-    kitty
     nwg-look
     hyprpaper
     blueman

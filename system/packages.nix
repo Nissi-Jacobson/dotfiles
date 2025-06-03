@@ -38,7 +38,7 @@
     fzf
     fd
     ripgrep-all
-    kitty
+    #kitty
     kittysay
     qbittorrent
     obsidian

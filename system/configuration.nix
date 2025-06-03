@@ -62,7 +62,7 @@
         variant = "colemak";
       };
       desktopManager = {
-        gnome.enable = true;
+        #gnome.enable = true;
       };
     };
     # Enable Ly terminal display manager
