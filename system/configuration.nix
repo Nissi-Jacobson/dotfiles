@@ -61,9 +61,6 @@
         layout = "us";
         variant = "colemak";
       };
-      desktopManager = {
-        #gnome.enable = true;
-      };
     };
     # Enable Ly terminal display manager
     displayManager.ly.enable = true;
@@ -128,6 +125,13 @@
 
   # Enable Font Config
   fonts.fontconfig.enable = true;
+
+  # Stylix Config
+  stylix = {
+    enable = true;
+    image = ../landscape.jpg;
+    autoEnable = true;
+  };
 
   # disabling xterm
   # programs.xterm.enable = false;

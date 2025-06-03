@@ -13,11 +13,12 @@
     brightnessctl
     pywal
     kdePackages.qtstyleplugin-kvantum
-    #sweet-folders
+    sweet
+    sweet-nova
+    sweet-folders
     layan-cursors
     hyprshot
     hyprlock
     hypridle
-    candy-icons
   ];
 }

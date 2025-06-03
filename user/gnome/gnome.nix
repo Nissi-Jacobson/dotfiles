@@ -2,6 +2,7 @@
 
 {
   home.packages = with pkgs; [
+    dconf-editor
     gnome-tweaks
     gnomeExtensions.blur-my-shell
     gnomeExtensions.user-themes
@@ -46,11 +47,11 @@
           #cursor-theme = "Adwaita";
           enable-animations = true;
           enable-hot-corners = true;
-          font-name = "0xProto, 10";
-          monospace-font-name = "0xProto 10";
+          #font-name = "0xProto, 10";
+          #monospace-font-name = "0xProto 10";
           #gtk-theme = "Adwaita";
-          scaling-factor = 1;
-          text-scaling-factor = 1;
+          #scaling-factor = 1;
+          #text-scaling-factor = 1;
         };
         "org/gnome/desktop/sound" = {
           allow-volume-above-100-percent = true;

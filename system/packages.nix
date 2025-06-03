@@ -53,10 +53,7 @@
     fastfetch
     xfce.thunar
     ly
-    sweet
-    sweet-nova
     zip 
-    candy-icons
     pandoc
     libreoffice-still
     onlyoffice-bin

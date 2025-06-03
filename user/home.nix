@@ -4,10 +4,17 @@
 
   # importing modules
   imports = [
-    #./gnome/default.nix
+    ./gnome/default.nix
     ./hyprland/hyprland.nix
     ./apps/default.nix
   ];
+  
+  # Stylix Config
+  stylix = {
+    enable = true;
+    image = ../landscape.jpg;
+    autoEnable = true;
+  };
 
   # Home Manager needs a bit of information about you and the paths it should manage.
   home.username = "nissi";
