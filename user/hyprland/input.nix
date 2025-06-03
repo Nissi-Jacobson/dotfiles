@@ -22,6 +22,8 @@
         touchpad = {
           natural_scroll = false;
         };
+
+        numlock_by_default = true;
       };
     
       # https://wiki.hyprland.org/Configuring/Variables/#gestures

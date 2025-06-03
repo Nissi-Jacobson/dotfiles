@@ -61,10 +61,17 @@
         layout = "us";
         variant = "colemak";
       };
-
+      desktopManager = {
+        gnome.enable = true;
+      };
     };
     # Enable Ly terminal display manager
     displayManager.ly.enable = true;
+    # Enable needed desktopManager
+    desktopManager = {
+      #plasma6.enable = true;
+      #cosmic.enable = true;
+    };
     # Enable CUPS to print documents.
     printing.enable = true;
     # Enable touchpad support (enabled default in most desktopManager).
@@ -85,6 +92,10 @@
     };
     # Enable gvfs
     gvfs.enable = true;
+    # Enable devmon
+    devmon.enable = true;
+    # Enalbe udisks
+    udisks2.enable = true;
   };
 
 
@@ -110,7 +121,7 @@
   users.users.nissi = {
     isNormalUser = true;
     description = "Nissi Jacobson";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "plugdev" "disk" "storage" ];
     packages = with pkgs; [
     ];
   };

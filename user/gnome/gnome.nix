@@ -2,7 +2,6 @@
 
 {
   home.packages = with pkgs; [
-    dconf-editor
     gnome-tweaks
     gnomeExtensions.blur-my-shell
     gnomeExtensions.user-themes
@@ -20,6 +19,7 @@
 
   # gnome customization
   dconf = {
+    enable = true;
       settings = {
         "org/gnome/shell" = {
           disable-user-extensions = false;
@@ -46,8 +46,8 @@
           #cursor-theme = "Adwaita";
           enable-animations = true;
           enable-hot-corners = true;
-          #font-name = "0xProto, 10";
-          #monospace-font-name = "0xProto 10";
+          font-name = "0xProto, 10";
+          monospace-font-name = "0xProto 10";
           #gtk-theme = "Adwaita";
           scaling-factor = 1;
           text-scaling-factor = 1;

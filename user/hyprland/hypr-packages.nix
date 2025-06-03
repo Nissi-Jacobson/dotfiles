@@ -19,5 +19,6 @@
     hyprshot
     hyprlock
     hypridle
+    candy-icons
   ];
 }

@@ -59,8 +59,9 @@
         # Clock
         clock = {
           tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-          format-alt = "{:%Y-%m-%d}";
-          format = "{:%H:%M}";
+          format-alt = "{:%d-%m-%Y}";
+          #format = "{:%H:%M}";
+          format = "{:%I:%M %p}";
         };
 
         # CPU

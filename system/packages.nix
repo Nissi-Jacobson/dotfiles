@@ -62,6 +62,11 @@
     onlyoffice-bin
     gvfs
     kdePackages.dolphin
+    udisks
+    shotcut
+    nautilus
+    qalculate-gtk
+    jdk
   ];
 }
 
