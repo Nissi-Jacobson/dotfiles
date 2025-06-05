@@ -21,7 +21,7 @@
     ../apps/default.nix
 #####
     #THEMES#
-    ../theme.nix
+    #../theme.nix
 #####
     #WAYBAR#
     ./waybar.nix

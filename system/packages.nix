@@ -28,6 +28,7 @@
     nodePackages.nodejs
     wl-clipboard
     vscodium
+    vscode
     tor-browser
     mpv
     kdePackages.kdenlive

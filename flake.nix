@@ -7,6 +7,7 @@
     nixpkgs.url = "github:NixOs/nixpkgs/release-25.05";
     home-manager.url = "github:nix-community/home-manager/release-25.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    nix-colors.url = "github:misterio77/nix-colors";
     stylix.url = "github:danth/stylix";
   };
 
@@ -28,6 +29,7 @@
     homeConfigurations = {
       nissi = home-manager.lib.homeManagerConfiguration{
         inherit pkgs;
+        extraSpecialArgs = { inherit inputs; };
         modules = [ ./user/home.nix ];
       };
     };

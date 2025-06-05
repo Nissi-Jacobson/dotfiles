@@ -8,14 +8,19 @@
     libnotify
     hyprpaper
     nwg-look
+    qt6ct
     hyprpaper
     blueman
     brightnessctl
     pywal
     kdePackages.qtstyleplugin-kvantum
-    sweet
-    sweet-nova
-    sweet-folders
+    #sweet
+    #sweet-nova
+    #sweet-folders
+    #candy-icons
+    tokyo-night-gtk
+    adwaita-icon-theme
+    #tokyonight-icon-theme
     layan-cursors
     hyprshot
     hyprlock

@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, lib, ... }:
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -56,10 +56,16 @@
       # Enable the X11 windowing system.
       # You can disable this if you're only using the Wayland session.
       enable = false;
-     # Configure keymap in X11
+      # Configure keymap in X11
       xkb = {
         layout = "us";
         variant = "colemak";
+      };
+      displayManager = {
+        #gdm.enable = true;
+      };
+      desktopManager = {
+        #gnome.enable = true;
       };
     };
     # Enable Ly terminal display manager
@@ -128,9 +134,26 @@
 
   # Stylix Config
   stylix = {
-    enable = true;
+    base16Scheme = {
+      base00 = "#1A1B26"; /* Default Background */
+      base01 = "#16161E"; /* Lighter Background (Used for status bars, line number and folding marks) */
+      base02 = "#2F3549"; /* Selection Background */
+      base03 = "#444B6A"; /* Comments, Invisibles, Line Highlighting */
+      base04 = "#787C99"; /* Dark Foreground (Used for status bars) */
+      base05 = "#A9B1D6"; /* Default Foreground, Caret, Delimiters, Operators */
+      base06 = "#CBCCD1"; /* Light Foreground (Not often used) */
+      base07 = "#D5D6DB"; /* Light Background (Not often used) */
+      base08 = "#C0CAF5"; /* RED Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted */
+      base09 = "#A9B1D6"; /* ORANGE Integers, Boolean, Constants, XML Attributes, Markup Link Url */
+      base0A = "#0DB9D7"; /* YELLOW Classes, Markup Bold, Search Text Background */
+      base0B = "#9ECE6A"; /* GREEN Strings, Inherited Class, Markup Code, Diff Inserted */
+      base0C = "#B4F9F8"; /* CYAN Support, Regular Expressions, Escape Characters, Markup Quotes */
+      base0D = "#2AC3DE"; /* BLUE Functions, Methods, Attribute IDs, Headings */
+      base0E = "#BB9AF7"; /* MAGENTA Keywords, Storage, Selector, Markup Italic, Diff Changed */
+      base0F = "#F7768E"; /* PURPLE? Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?> */
+    };
     image = ../landscape.jpg;
-    autoEnable = true;
+    polarity = "dark";
   };
 
   # disabling xterm

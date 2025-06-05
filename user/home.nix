@@ -1,20 +1,13 @@
-{ config, pkgs, ... }:
+{ config, nix-colors, inputs, ... }:
 
 {
-
   # importing modules
   imports = [
-    ./gnome/default.nix
+    #./gnome/default.nix
     ./hyprland/hyprland.nix
     ./apps/default.nix
+    inputs.nix-colors.homeManagerModules.default
   ];
-  
-  # Stylix Config
-  stylix = {
-    enable = true;
-    image = ../landscape.jpg;
-    autoEnable = true;
-  };
 
   # Home Manager needs a bit of information about you and the paths it should manage.
   home.username = "nissi";
@@ -31,6 +24,8 @@
 
   #  Session Environment Variables -> sessionVariables
   home.sessionVariables = {
+    QT_QPA_PLATFORMTHEME = "qt6ct";
+    QT_STYLE_OVERRIDE = "kvantum";
   };
 
   # Let Home Manager install and manage itself.

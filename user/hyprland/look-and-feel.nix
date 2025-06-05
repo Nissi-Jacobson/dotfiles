@@ -18,7 +18,7 @@
       
           # https://wiki.hyprland.org/Configuring/Variables/#variable-types for info about colors
           "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-          #"col.active_border" = "0xFFFFFF";
+          #"col.active_border" = "$c0 $ca $c3 $c2 $c1 $c0 90deg";
           "col.inactive_border" = "rgba(595959aa)";
           #"col.inactive_border" = "0xFFFFFF";
       
@@ -41,7 +41,7 @@
       
           shadow = {
               enabled = false;
-              range = 4;
+              range = 30;
               render_power = 3;
               color = "rgba(1a1a1aee)";
           };
@@ -73,6 +73,8 @@
           animation = [
             "global, 1, 10, default"
             "border, 1, 5.39, easeOutQuint"
+            #"border, 1, 5, liner"
+            #"borderangle, 1, 360, liner, loop"
             "windows, 1, 4.79, easeOutQuint"
             "windowsIn, 1, 4.1, easeOutQuint, popin 87%"
             "windowsOut, 1, 1.49, linear, popin 87%"
