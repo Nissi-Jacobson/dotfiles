@@ -35,8 +35,8 @@
 
   #  Session Environment Variables -> sessionVariables
   home.sessionVariables = {
-    #QT_QPA_PLATFORMTHEME = lib.mkForce "qt6ct";
-    #QT_STYLE_OVERRIDE = lib.mkForce "none";
+    #QT_QPA_PLATFORMTHEME = "qt5ct";
+    #QT_QPA_PLATFORMTHEME_QT6 = "qt6ct";
   };
 
   # Let Home Manager install and manage itself.
