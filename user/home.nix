@@ -1,6 +1,7 @@
-{ config, nix-colors, inputs, ... }:
+{ config, nix-colors, inputs, lib, ... }:
 
 {
+
   # importing modules
   imports = [
     #./gnome/default.nix
@@ -17,16 +18,25 @@
   # home.stateVersion = "25.05"; # DO NOT EDIT
   home.stateVersion = "25.05"; # edited to be the same with system packages
 
-  # adding dotfiles
-  home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/nissi/dotfiles/nvim";
-  home.file.".config/hypr/hyprshot.conf".text = ''
-    save_path = "~/Pictures/Screenshots/";
-  '';
+ # adding dotfiles
+  home = {
+    file = {
+      ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/nissi/dotfiles/nvim";
+      ".config/hypr/hyprshot.conf".text = ''
+          save_path = "~/Pictures/Screenshots/";
+        '';
+    };
+  };
+
+#  qt = {
+#    enable = true;
+#    platformTheme = "qt6ct";
+#  };
 
   #  Session Environment Variables -> sessionVariables
   home.sessionVariables = {
-    #QT_QPA_PLATFORMTHEME = qt6ct;
-
+    #QT_QPA_PLATFORMTHEME = lib.mkForce "qt6ct";
+    #QT_STYLE_OVERRIDE = lib.mkForce "none";
   };
 
   # Let Home Manager install and manage itself.

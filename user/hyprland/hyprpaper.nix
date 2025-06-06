@@ -1,11 +1,11 @@
-{config, pkgs, ...}:
+{config, pkgs, lib, ...}:
 
 {
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload  = " /home/nissi/dotfiles/landscape.jpg";
-      wallpaper = " , /home/nissi/dotfiles/landscape.jpg";
+      preload  = lib.mkForce " /home/nissi/dotfiles/landscape.jpg";
+      wallpaper = lib.mkForce " , /home/nissi/dotfiles/landscape.jpg";
     };
   };
 }

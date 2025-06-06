@@ -1,10 +1,14 @@
-{ config, inputs, ... }:
+{ config, inputs, pkgs, ... }:
 {
   # Stylix Configurartion
   stylix = {
     enable = true;
-    #image = ./landscape.jpg;
+    image = ./landscape.jpg;
     autoEnable = true;
+    targets = {
+      qt.enable = true;
+      gtk.enable = true;
+    };
     base16Scheme = {
       base00 = "#1A1B26"; /* Default Background */
       base01 = "#16161E"; /* Lighter Background (Used for status bars, line number and folding marks) */
@@ -34,6 +38,11 @@
         desktop = 10;
         popups = 10;
       };
+    };
+    cursor = {
+      name = "Bibata-Modern-Ice";
+      package = pkgs.bibata-cursors;
+      size = 24;
     };
   };
 }
