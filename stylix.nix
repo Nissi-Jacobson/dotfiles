@@ -3,7 +3,7 @@
   # Stylix Configurartion
   stylix = {
     enable = true;
-    image = ./landscape.jpg;
+    #image = ./landscape.jpg;
     autoEnable = true;
     targets = {
       qt.enable = true;

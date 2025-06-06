@@ -4,8 +4,8 @@
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload  = lib.mkForce " /home/nissi/dotfiles/landscape.jpg";
-      wallpaper = lib.mkForce " , /home/nissi/dotfiles/landscape.jpg";
+      preload  = lib.mkForce " /home/nissi/dotfiles/heroin.png";
+      wallpaper = lib.mkForce " , /home/nissi/dotfiles/heroin.png";
     };
   };
 }
