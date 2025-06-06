@@ -7,8 +7,6 @@
     dunst
     libnotify
     hyprpaper
-    nwg-look
-    qt6ct
     hyprpaper
     blueman
     brightnessctl

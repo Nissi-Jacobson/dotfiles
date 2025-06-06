@@ -8,6 +8,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./packages.nix
+      ../stylix.nix
     ];
 
   # Bootloader.
@@ -55,7 +56,7 @@
     xserver = {
       # Enable the X11 windowing system.
       # You can disable this if you're only using the Wayland session.
-      enable = false;
+      enable = true;
       # Configure keymap in X11
       xkb = {
         layout = "us";
@@ -70,8 +71,10 @@
     };
     # Enable Ly terminal display manager
     displayManager.ly.enable = true;
+    #displayManager.gdm.enable = true;
     # Enable needed desktopManager
     desktopManager = {
+      #gnome.enable = true;
       #plasma6.enable = true;
       #cosmic.enable = true;
     };
@@ -131,30 +134,6 @@
 
   # Enable Font Config
   fonts.fontconfig.enable = true;
-
-  # Stylix Config
-  stylix = {
-    base16Scheme = {
-      base00 = "#1A1B26"; /* Default Background */
-      base01 = "#16161E"; /* Lighter Background (Used for status bars, line number and folding marks) */
-      base02 = "#2F3549"; /* Selection Background */
-      base03 = "#444B6A"; /* Comments, Invisibles, Line Highlighting */
-      base04 = "#787C99"; /* Dark Foreground (Used for status bars) */
-      base05 = "#A9B1D6"; /* Default Foreground, Caret, Delimiters, Operators */
-      base06 = "#CBCCD1"; /* Light Foreground (Not often used) */
-      base07 = "#D5D6DB"; /* Light Background (Not often used) */
-      base08 = "#C0CAF5"; /* RED Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted */
-      base09 = "#A9B1D6"; /* ORANGE Integers, Boolean, Constants, XML Attributes, Markup Link Url */
-      base0A = "#0DB9D7"; /* YELLOW Classes, Markup Bold, Search Text Background */
-      base0B = "#9ECE6A"; /* GREEN Strings, Inherited Class, Markup Code, Diff Inserted */
-      base0C = "#B4F9F8"; /* CYAN Support, Regular Expressions, Escape Characters, Markup Quotes */
-      base0D = "#2AC3DE"; /* BLUE Functions, Methods, Attribute IDs, Headings */
-      base0E = "#BB9AF7"; /* MAGENTA Keywords, Storage, Selector, Markup Italic, Diff Changed */
-      base0F = "#F7768E"; /* PURPLE? Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?> */
-    };
-    image = ../landscape.jpg;
-    polarity = "dark";
-  };
 
   # disabling xterm
   # programs.xterm.enable = false;

@@ -17,9 +17,9 @@
           border_size = 0;
       
           # https://wiki.hyprland.org/Configuring/Variables/#variable-types for info about colors
-          "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
+          #"col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
           #"col.active_border" = "$c0 $ca $c3 $c2 $c1 $c0 90deg";
-          "col.inactive_border" = "rgba(595959aa)";
+          #"col.inactive_border" = "rgba(595959aa)";
           #"col.inactive_border" = "0xFFFFFF";
       
           # Set to true enable resizing windows by clicking and dragging on borders and gaps
@@ -43,7 +43,7 @@
               enabled = false;
               range = 30;
               render_power = 3;
-              color = "rgba(1a1a1aee)";
+              #color = "rgba(1a1a1aee)";
           };
       
           # https://wiki.hyprland.org/Configuring/Variables/#blur

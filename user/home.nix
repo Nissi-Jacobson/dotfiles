@@ -6,6 +6,7 @@
     #./gnome/default.nix
     ./hyprland/hyprland.nix
     ./apps/default.nix
+    ../stylix.nix
     inputs.nix-colors.homeManagerModules.default
   ];
 
@@ -16,7 +17,7 @@
   # home.stateVersion = "25.05"; # DO NOT EDIT
   home.stateVersion = "25.05"; # edited to be the same with system packages
 
- # adding dotfiles
+  # adding dotfiles
   home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/nissi/dotfiles/nvim";
   home.file.".config/hypr/hyprshot.conf".text = ''
     save_path = "~/Pictures/Screenshots/";
@@ -24,8 +25,8 @@
 
   #  Session Environment Variables -> sessionVariables
   home.sessionVariables = {
-    QT_QPA_PLATFORMTHEME = "qt6ct";
-    QT_STYLE_OVERRIDE = "kvantum";
+    #QT_QPA_PLATFORMTHEME = qt6ct;
+
   };
 
   # Let Home Manager install and manage itself.

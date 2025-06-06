@@ -7,8 +7,8 @@
     #clearDefaultKeybinds = true;
     #installVimSyntax = true;
     settings = {
-      theme = "tokyonight_night";
-      font-family = "0xProto Nerd Font Mono";
+      #theme = "tokyonight_night";
+      font-family = "0xProto Nerd Font";
       font-size = 10;
       #background-opacity = 0.69;
       #background-blur = true;
