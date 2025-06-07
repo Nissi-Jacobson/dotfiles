@@ -131,10 +131,13 @@
         };
 
         # BackLight
-        #backlight = {
-        #  format = "{percentage}% {icon}";
-        #  format-icons = ["󰃚 " "󰃛 " "󰃜 " "󰃝 " "󰃞 " "󰃟 " "󰃠 "];
-        #};
+        backlight = {
+          device = "amdgpu_bl2"; # Change this to your actual device name
+          format = "{percentage}% {icon} {format_icons}";
+          format-icons = [" 󰃚 " " 󰃛 " " 󰃜 " " 󰃝 " " 󰃞 " " 󰃟 " " 󰃠 "];
+          on-scroll-up = "brightnessctl set 1%+";
+          on-scroll-down = "brightnessctl set 1%-";
+        };
       };
     };
 
@@ -152,6 +155,7 @@
       window#waybar {
         background-color: transparent; 
         color: #ffffff;
+        margin-top: 2px;
         transition-property: background-color;
         transition-duration: .5s;
       }

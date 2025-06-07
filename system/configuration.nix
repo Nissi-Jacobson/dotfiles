@@ -121,7 +121,7 @@
   users.users.nissi = {
     isNormalUser = true;
     description = "Nissi Jacobson";
-    extraGroups = [ "networkmanager" "wheel" "plugdev" "disk" "storage" ];
+    extraGroups = [ "networkmanager" "wheel" "plugdev" "disk" "storage" "video" ];
     packages = with pkgs; [
     ];
   };
