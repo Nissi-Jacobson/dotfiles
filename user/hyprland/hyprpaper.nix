@@ -4,8 +4,8 @@
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload  = lib.mkForce " /home/nissi/dotfiles/heroin.png";
-      wallpaper = lib.mkForce " , /home/nissi/dotfiles/heroin.png";
+      preload  = " /home/nissi/dotfiles/wallpapers/wp6746996-tokyo-night-wallpapers.jpg";
+      wallpaper = " , /home/nissi/dotfiles/wallpapers/wp6746996-tokyo-night-wallpapers.jpg";
     };
   };
 }
