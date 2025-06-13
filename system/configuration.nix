@@ -105,10 +105,7 @@
     fish.enable = true;
     nm-applet.enable = true;
     hyprland.enable = true;
-#    kde.connect = {
-#      enable = true;
-#      package = pkgs.gnomeExtensions.gsconnect;
-#    };
+    kdeconnect.enable = true;
   };
 
   # default shell for all users

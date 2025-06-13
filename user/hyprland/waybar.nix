@@ -16,7 +16,7 @@
         modules-right = [ 
           "tray" 
           "network" 
-          "backlight"
+          #"backlight"
           "pulseaudio" 
           "battery"
         ];

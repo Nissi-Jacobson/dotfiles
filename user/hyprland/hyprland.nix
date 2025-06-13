@@ -32,5 +32,8 @@
 #####
     #HYPRIDLE#
     ./hypridle.nix
+#####
+    #WLOGOUT#
+    ./wlogout.nix
   ];
 }

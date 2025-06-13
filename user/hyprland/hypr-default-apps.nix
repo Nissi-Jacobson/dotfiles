@@ -11,7 +11,7 @@
 
       # Set programs that you use
       "$terminal" = "kitty";
-      "$fileManager" = "thunar";
+      "$fileManager" = "nautilus";
       "$menu" = "wofi --show drun";
     };
   };

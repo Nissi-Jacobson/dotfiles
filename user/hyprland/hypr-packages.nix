@@ -23,5 +23,6 @@
     hyprshot
     hyprlock
     hypridle
+    wlogout
   ];
 }

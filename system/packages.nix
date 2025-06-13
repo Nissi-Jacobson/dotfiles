@@ -69,6 +69,7 @@
     nautilus
     qalculate-gtk
     jdk
+    librewolf
   ];
 }
 
