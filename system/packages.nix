@@ -70,6 +70,7 @@
     qalculate-gtk
     jdk
     librewolf
+    live-server
   ];
 }
 
