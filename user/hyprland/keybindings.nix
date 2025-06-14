@@ -25,8 +25,8 @@ bind = [
   "$mainMod, J, togglesplit, # dwindle"
 
   # ScreenShot
-  " , PRINT, exec, hyprshot -m window"
-  "$shiftMod, S, exec, hyprshot -m region"
+  " , PRINT, exec, hyprshot -m window -o ~/Pictures/Screenshots/"
+  "$shiftMod, S, exec, hyprshot -m region -o ~/Pictures/Screenshots/"
 
   # Hyprlock
   "$mainMod, L, exec, hyprlock"
