@@ -10,6 +10,7 @@
     _0xproto
     nerd-fonts.jetbrains-mono
     jetbrains-mono
+    times-newer-roman
     #nerd-fonts.symbols-only
   ];
   
