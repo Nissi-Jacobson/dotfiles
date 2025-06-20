@@ -69,7 +69,7 @@
     # Enable needed desktopManager
     desktopManager = {
       gnome.enable = true;
-      #plasma6.enable = true;
+      plasma6.enable = true;
       #cosmic.enable = true;
     };
     # Enable CUPS to print documents.

@@ -31,6 +31,7 @@
     ghostty
     direnv
     nodePackages.nodejs
+    wayland-utils
     wl-clipboard
     vscodium
     vscode
@@ -38,7 +39,6 @@
     mpv
     kdePackages.kdenlive
     auto-cpufreq
-    brave
     lutris
     lazygit
     fzf
@@ -72,6 +72,19 @@
     jdk
     librewolf
     live-server
+    tor-browser
+    bottles
+    (python3.withPackages (ps: with ps; [
+      pip
+      setuptools
+      numba
+      numpy
+      openai-whisper
+      srt
+      torch
+      # commonly used packages
+    ]))
+    audacity
   ];
 }
 
