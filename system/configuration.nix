@@ -9,7 +9,6 @@
       ./hardware-configuration.nix
       ./packages.nix
       ../stylix/stylix-system.nix
-      ./mouse-system.nix
     ];
 
   # Bootloader.
