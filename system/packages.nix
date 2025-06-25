@@ -85,6 +85,8 @@
       # commonly used packages
     ]))
     audacity
+    virtualbox
+    osu-lazer-bin
   ];
 }
 

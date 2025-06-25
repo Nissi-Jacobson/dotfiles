@@ -7,7 +7,8 @@
     ./gnome/default.nix
     ./hyprland/hyprland.nix
     ./apps/default.nix
-    ../stylix.nix
+    ../stylix/stylix-home.nix
+    #./mouse.nix
     inputs.nix-colors.homeManagerModules.default
   ];
 

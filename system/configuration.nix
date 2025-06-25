@@ -8,7 +8,8 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./packages.nix
-      ../stylix.nix
+      ../stylix/stylix-system.nix
+      ./mouse-system.nix
     ];
 
   # Bootloader.
@@ -69,7 +70,7 @@
     # Enable needed desktopManager
     desktopManager = {
       gnome.enable = true;
-      plasma6.enable = true;
+      #plasma6.enable = true;
       #cosmic.enable = true;
     };
     # Enable CUPS to print documents.
@@ -106,7 +107,13 @@
     nm-applet.enable = true;
     hyprland.enable = true;
     kdeconnect.enable = true;
+    # ksshaskpass
+    # or for seahorse:
+    ssh.askPassword = lib.mkForce "${pkgs.seahorse}/libexec/seahorse/ssh-askpass";
   };
+
+  # waydroid
+  virtualisation.waydroid.enable = true;
 
   # default shell for all users
   users.defaultUserShell = pkgs.fish;

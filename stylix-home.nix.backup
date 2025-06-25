@@ -1,5 +1,19 @@
 { config, inputs, pkgs, ... }:
 {
+  # gtk icon theme
+  gtk = {
+    enable = true;
+    iconTheme = {
+      name = "candy-icons";
+      package = pkgs.candy-icons;
+    };
+  };
+  # qt theme
+  qt = {
+    enable = true;
+    platform = "gtk";
+  };
+
   # Stylix Configurartion
   stylix = {
     enable = true;
@@ -27,6 +41,11 @@
       base0E = "#BB9AF7"; /* MAGENTA Keywords, Storage, Selector, Markup Italic, Diff Changed */
       base0F = "#F7768E"; /* PURPLE? Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?> */
     };
+    #iconTheme = {
+    #  enable = true;
+    #  name = "candy-icons";
+    #  package = pkgs.candy-icons;
+    #};
     polarity = "dark";
     fonts = {
       serif.name = "0xProto Nerd Font Mono";
