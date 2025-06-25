@@ -87,6 +87,8 @@
     audacity
     virtualbox
     osu-lazer-bin
+    piper
+    input-remapper
   ];
 }
 

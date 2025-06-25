@@ -73,12 +73,24 @@ bind = [
   "$mainMod, mouse_down, workspace, e+1"
   "$mainMod, mouse_up, workspace, e-1"
   
+  "$mainMod, mouse:276, killactive"
+  "$mainMod, mouse:275, togglefloating"
+  
+  # Mouse extra buttons for undo/redo
+  #", mouse:275, exec, wtype -k ctrl+z"      # Undo
+  #", mouse:276, exec, wtype -k ctrl+y"      # Redo
+
+  # Mouse extra buttons for undo/redo
+  #", mouse:275, sendshortcut, CTRL, z"      # Undo
+  #", mouse:276, sendshortcut, CTRL, y"      # Redo
+
 ];
 
 # Move/resize windows with mainMod + LMB/RMB and dragging
 bindm = [
   "$mainMod, mouse:272, movewindow"
   "$mainMod, mouse:273, resizewindow"
+
 ];
   
   # Laptop multimedia keys for volume and LCD brightness

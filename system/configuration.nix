@@ -96,6 +96,10 @@
     devmon.enable = true;
     # Enalbe udisks
     udisks2.enable = true;
+    # ratbagd for piper to configure mouse
+    ratbagd.enable = true;
+    # input remapper
+    input-remapper.enable = true;
   };
 
 

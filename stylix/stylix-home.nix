@@ -9,10 +9,10 @@
     };
   };
   # qt theme
-  #qt = {
-  #  enable = true;
-  #  platform = "gtk";
-  #};
+  qt = {
+    enable = true;
+    style.name = "kvantum";
+  };
 
   # Stylix Configurartion
   stylix = {

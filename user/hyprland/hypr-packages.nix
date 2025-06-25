@@ -24,5 +24,7 @@
     hyprlock
     hypridle
     wlogout
+    ydotool
+    wtype
   ];
 }
