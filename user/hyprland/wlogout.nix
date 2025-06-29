@@ -5,37 +5,37 @@
     enable = true;
     layout = [
       {
-        label = "lock";
+        label = "lock(L)";
         action = "swaylock";
         text = "Lock";
         keybind = "l";
       }
       {
-        label = "hibernate";
+        label = "hibernate(H)";
         action = "systemctl hibernate";
         text = "Hibernate";
         keybind = "h";
       }
       {
-        label = "logout";
+        label = "logout(E)";
         action = "hyprctl dispatch exit";
         text = "Logout";
         keybind = "e";
       }
       {
-        label = "shutdown";
+        label = "shutdown(S)";
         action = "systemctl poweroff";
         text = "Shutdown";
         keybind = "s";
       }
       {
-        label = "suspend";
+        label = "suspend(U)";
         action = "systemctl suspend";
         text = "Suspend";
         keybind = "u";
       }
       {
-        label = "reboot";
+        label = "reboot(R)";
         action = "systemctl reboot";
         text = "Reboot";
         keybind = "r";

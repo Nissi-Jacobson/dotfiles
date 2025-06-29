@@ -115,8 +115,14 @@
     ssh.askPassword = lib.mkForce "${pkgs.seahorse}/libexec/seahorse/ssh-askpass";
   };
 
-  # waydroid
-  virtualisation.waydroid.enable = true;
+  virtualisation = {
+    waydroid.enable = true;
+    docker.rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
+  };
+
 
   # default shell for all users
   users.defaultUserShell = pkgs.fish;
@@ -128,7 +134,7 @@
   users.users.nissi = {
     isNormalUser = true;
     description = "Nissi Jacobson";
-    extraGroups = [ "networkmanager" "wheel" "plugdev" "disk" "storage" "video" ];
+    extraGroups = [ "networkmanager" "wheel" "plugdev" "disk" "storage" "video" "docker" ];
     packages = with pkgs; [
     ];
   };

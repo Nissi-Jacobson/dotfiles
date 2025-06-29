@@ -89,6 +89,8 @@
     osu-lazer-bin
     piper
     input-remapper
+    mullvad-browser
+    brave
   ];
 }
 
