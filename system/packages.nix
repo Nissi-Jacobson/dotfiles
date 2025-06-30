@@ -91,7 +91,7 @@
     input-remapper
     mullvad-browser
     brave
-    natron
+    #natron
     blender
   ];
 }
