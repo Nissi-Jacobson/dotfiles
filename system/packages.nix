@@ -65,7 +65,6 @@
     libreoffice-still
     onlyoffice-bin
     gvfs
-    kdePackages.dolphin
     udisks
     shotcut
     nautilus
@@ -81,9 +80,6 @@
     audacity
     virtualbox
     osu-lazer-bin
-    piper
-    input-remapper
-    mullvad-browser
     brave
     #natron
     blender
