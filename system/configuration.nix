@@ -65,7 +65,7 @@
     };
     # Enable Ly terminal display manager
     displayManager = {
-      ly.enable = true;
+      #ly.enable = true;
       gdm.enable = true;
     };
     # Enable needed desktopManager
