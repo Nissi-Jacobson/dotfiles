@@ -4,6 +4,9 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # Allow broken packages
+  #nixpkgs.config.allowBroken = true;
+
   # Download Fonts
   fonts.packages = with pkgs;[
     nerd-fonts._0xproto
@@ -26,14 +29,12 @@
     neovim
     clang
     firefox
-    zsh
     fish
     ghostty
     direnv
     nodePackages.nodejs
     wayland-utils
     wl-clipboard
-    vscodium
     vscode
     tor-browser
     mpv
@@ -76,13 +77,6 @@
     bottles
     (python3.withPackages (ps: with ps; [
       pip
-      setuptools
-      numba
-      numpy
-      openai-whisper
-      srt
-      torch
-      # commonly used packages
     ]))
     audacity
     virtualbox
@@ -93,6 +87,8 @@
     brave
     #natron
     blender
+    kdePackages.kdenlive
+    gnome-disk-utility
   ];
 }
 

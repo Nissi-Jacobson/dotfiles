@@ -64,13 +64,15 @@
       };
     };
     # Enable Ly terminal display manager
-    displayManager.ly.enable = true;
-    #displayManager.gdm.enable = true;
+    displayManager = {
+      ly.enable = true;
+      gdm.enable = true;
+    };
     # Enable needed desktopManager
     desktopManager = {
-      #gnome.enable = true;
+      gnome.enable = true;
       #plasma6.enable = true;
-      cosmic.enable = true;
+      #cosmic.enable = true;
     };
     # Enable CUPS to print documents.
     printing.enable = true;
