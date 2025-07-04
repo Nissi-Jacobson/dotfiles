@@ -23,7 +23,7 @@
           #"col.inactive_border" = "0xFFFFFF";
       
           # Set to true enable resizing windows by clicking and dragging on borders and gaps
-          resize_on_border = false;
+          resize_on_border = true;
       
           # Please see https://wiki.hyprland.org/Configuring/Tearing/ before you turn this on
           allow_tearing = false;
@@ -33,7 +33,7 @@
       
       # https://wiki.hyprland.org/Configuring/Variables/#decoration
       decoration = {
-          rounding = 0;
+          rounding = 5;
       
           # Change transparency of focused and unfocused windows
           active_opacity = 1.0;
