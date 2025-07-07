@@ -22,6 +22,7 @@
     targets = {
       qt.enable = true;
       gtk.enable = true;
+      gnome.enable = true;
     };
     base16Scheme = {
       base00 = "#1A1B26"; /* Default Background */

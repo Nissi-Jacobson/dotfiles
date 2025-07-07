@@ -58,7 +58,7 @@
         };
 
         "hyprland/window" = {
-          format = " {}";
+          format = "󰈈 {}";
           max-length = 40;
           separate-outputs = true;
         };

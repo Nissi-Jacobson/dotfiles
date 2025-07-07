@@ -4,6 +4,9 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # Allow NVIDIA GPU Support
+  nixpkgs.config.cudaSupport = true;
+
   # Allow broken packages
   #nixpkgs.config.allowBroken = true;
 
@@ -30,7 +33,7 @@
     clang
     firefox
     fish
-    ghostty
+    #ghostty
     direnv
     nodePackages.nodejs
     wayland-utils
@@ -76,7 +79,17 @@
     bottles
     (python3.withPackages (ps: with ps; [
       pip
+      opencv4
+      numpy
+      pillow
+      #torch
+      #torchvision
+      matplotlib
+      setuptools
+      wheel
     ]))
+# use this command to install sam-2
+# pip install --user git+https://github.com/facebookresearch/segment-anything-2.git
     audacity
     virtualbox
     osu-lazer-bin
@@ -84,7 +97,11 @@
     #natron
     blender
     kdePackages.kdenlive
+    # magma # required for torch and torchvision
+    opencv
+    ffmpeg-full
     gnome-disk-utility
+    #davinci-resolve
   ];
 }
 

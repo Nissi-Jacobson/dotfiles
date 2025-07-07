@@ -1,11 +1,12 @@
 { config, cosmic-manager, ... }:
 {
   imports = [
-    ./inputs.nix
-    ./window-management.nix
+    #./inputs.nix
+    #./window-management.nix
+    ./example.nix
   ];
 
-  services.cosmic-manager = {
-    enable = true;
-  };
+  #services.cosmic-manager = {
+  #  enable = true;
+  #};
 }
