@@ -76,17 +76,19 @@
     librewolf
     live-server
     tor-browser
+    wineWowPackages.waylandFull
     bottles
     (python3.withPackages (ps: with ps; [
       pip
-      opencv4
+      #opencv4
       numpy
-      pillow
+      #pillow
       #torch
       #torchvision
-      matplotlib
-      setuptools
-      wheel
+      #matplotlib
+      #setuptools
+      #wheel
+      pytube
     ]))
 # use this command to install sam-2
 # pip install --user git+https://github.com/facebookresearch/segment-anything-2.git
@@ -101,7 +103,11 @@
     opencv
     ffmpeg-full
     gnome-disk-utility
-    #davinci-resolve
+    davinci-resolve
+    lzip
+    distrobox
+    olive-editor
   ];
+
 }
 

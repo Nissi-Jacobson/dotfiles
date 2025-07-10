@@ -9,8 +9,8 @@
       
       # https://wiki.hyprland.org/Configuring/Variables/#input
       input = {
-        kb_layout = "us";
-        kb_variant = "colemak";
+        kb_layout = "us, us";
+        kb_variant = "colemak, ";
         #kb_model = 
         kb_options = "grp:win_space_toggle";
         #kb_rules =

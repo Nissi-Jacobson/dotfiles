@@ -17,7 +17,7 @@
   # Stylix Configurartion
   stylix = {
     enable = true;
-    #image = ./landscape.jpg;
+    image = ../wallpapers/sushi_original.png;
     autoEnable = true;
     targets = {
       qt.enable = true;
