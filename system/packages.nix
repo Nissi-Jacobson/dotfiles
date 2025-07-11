@@ -33,80 +33,50 @@
     clang
     firefox
     fish
-    #ghostty
     direnv
     nodePackages.nodejs
     wayland-utils
     wl-clipboard
     vscode
-    tor-browser
     mpv
     kdePackages.kdenlive
-    auto-cpufreq
-    lutris
     lazygit
     fzf
     fd
     ripgrep-all
     kitty
-    kittysay
     qbittorrent
     obsidian
     zed-editor
     unzip
-    qutebrowser
     feh
     qimgv
     networkmanagerapplet
-    #font-awesome
     neofetch
     fastfetch
-    xfce.thunar
     ly
     zip 
     pandoc
     libreoffice-still
-    onlyoffice-bin
     gvfs
     udisks
-    shotcut
     nautilus
     qalculate-gtk
     jdk
     librewolf
-    live-server
-    tor-browser
     wineWowPackages.waylandFull
-    bottles
     (python3.withPackages (ps: with ps; [
       pip
-      #opencv4
       numpy
-      #pillow
-      #torch
-      #torchvision
-      #matplotlib
-      #setuptools
-      #wheel
       pytube
     ]))
-# use this command to install sam-2
-# pip install --user git+https://github.com/facebookresearch/segment-anything-2.git
     audacity
-    virtualbox
     osu-lazer-bin
     brave
-    #natron
-    blender
-    kdePackages.kdenlive
-    # magma # required for torch and torchvision
-    opencv
     ffmpeg-full
     gnome-disk-utility
-    davinci-resolve
-    lzip
-    distrobox
     olive-editor
+    htop
   ];
 
 }

@@ -15,7 +15,7 @@
     ./hypr-packages.nix
 #####
     #WALLPAPER#
-    ./hyprpaper.nix
+    #./hyprpaper.nix
 #####
     #DEFAULT APPS#
     ../apps/default.nix
