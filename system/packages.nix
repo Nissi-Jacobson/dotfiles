@@ -75,8 +75,11 @@
     brave
     ffmpeg-full
     gnome-disk-utility
-    olive-editor
     htop
+    ani-cli
+    gnome-calendar
+    live-server
+    steam
   ];
 
 }

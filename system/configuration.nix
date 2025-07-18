@@ -136,11 +136,6 @@
   };
 
   virtualisation = {
-    #waydroid.enable = true;
-    docker.rootless = {
-      enable = true;
-      setSocketVariable = true;
-    };
   };
 
 
@@ -154,7 +149,7 @@
   users.users.nissi = {
     isNormalUser = true;
     description = "Nissi Jacobson";
-    extraGroups = [ "networkmanager" "wheel" "plugdev" "disk" "storage" "video" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "plugdev" "disk" "storage" "video" ];
     packages = with pkgs; [
     ];
   };
