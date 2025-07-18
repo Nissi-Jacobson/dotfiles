@@ -7,6 +7,7 @@
     ./hyprland/hyprland.nix
     ./apps/default.nix
     ../stylix/stylix-home.nix
+    ./home-packages.nix
     inputs.nix-colors.homeManagerModules.default
   ];
 

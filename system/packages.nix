@@ -28,58 +28,23 @@
     qt6ct
     libsForQt5.qtstyleplugin-kvantum
     wget
-    git
     neovim
-    clang
-    firefox
-    fish
-    direnv
-    nodePackages.nodejs
-    wayland-utils
-    wl-clipboard
-    vscode
-    mpv
-    kdePackages.kdenlive
     lazygit
     fzf
     fd
     ripgrep-all
-    kitty
-    qbittorrent
-    obsidian
-    zed-editor
+    clang
     unzip
-    feh
-    qimgv
-    networkmanagerapplet
-    neofetch
-    fastfetch
     ly
     zip 
-    pandoc
-    libreoffice-still
+    fish
+    wineWowPackages.waylandFull
+    direnv
+    wayland-utils
+    wl-clipboard
     gvfs
     udisks
-    nautilus
-    qalculate-gtk
-    jdk
-    librewolf
-    wineWowPackages.waylandFull
-    (python3.withPackages (ps: with ps; [
-      pip
-      numpy
-      pytube
-    ]))
-    audacity
-    osu-lazer-bin
-    brave
     ffmpeg-full
-    gnome-disk-utility
-    htop
-    ani-cli
-    gnome-calendar
-    live-server
-    steam
   ];
 
 }
