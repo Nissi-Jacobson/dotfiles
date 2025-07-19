@@ -8,7 +8,6 @@
   nixpkgs.config.allowBroken = false;
 
   home.packages = with pkgs; [
-    jupyter
     git
     firefox
     nodePackages.nodejs
@@ -40,13 +39,10 @@
     live-server
     steam
 
-#    (python3.withPackages (ps: with ps; [
-#      pip
-#      numpy
-#      pandas
-#      matplotlib
-#      jupyter
-#    ]))
+    (python3.withPackages (ps: with ps; [
+      pip
+      ipython
+    ]))
 
   ];
 }

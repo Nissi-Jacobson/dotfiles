@@ -5,9 +5,9 @@
   # importing modules
   imports = [
     ./hyprland/hyprland.nix
-    ./apps/default.nix
     ../stylix/stylix-home.nix
     ./home-packages.nix
+    ./apps/default.nix
     inputs.nix-colors.homeManagerModules.default
   ];
 
