@@ -8,5 +8,6 @@
     ./kitty.nix
     ./sh.nix
     ./qutebrowser.nix
+    ./foot.nix
   ];
 }

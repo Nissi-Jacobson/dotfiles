@@ -6,9 +6,6 @@ let
     la = "ls -a";
     lal = "ls -al";
     ".." = "cd ..";
-    dotnvim = "cd ~/dotfiles/ && nvim";
-    obsnvim = "cd ~/Documents/brain-dump/ && nvim";
-    codenvim = "cd ~/Documents/codes && nvim";
   };
   myShellAbbrs = myShellAliases;
 in
@@ -16,10 +13,35 @@ in
 {
   # fish customization
   programs.fish = {
+    enable = true;
     plugins = [];
+    shellInit = ''
+      eval (direnv hook fish)
+    '';
     shellAbbrs = myShellAliases;
     preferAbbrs = true;
     shellAliases = myShellAliases;
+    functions = {
+      pyshell = ''
+        nix-shell ~/dotfiles/user/user-shells/pyShell.nix
+      '';
+      codenvim = ''
+        cd ~/Documents/codes/
+        nvim
+      '';
+      snaknvim = ''
+        cd ~/Documents/codes/
+        pyshell
+      '';
+      obsnvim = ''
+        cd ~/Documents/brain-dump/
+        nvim
+      '';
+      dotnvim = ''
+        cd ~/dotfiles/
+        nvim
+      '';
+    };
   };
 
   # zsh customization

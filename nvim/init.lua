@@ -1,9 +1,11 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
+
 vim.api.nvim_set_option("clipboard", "unnamed")
 -- Copy/paste from system clipboard
 vim.keymap.set({ 'n', 'x' }, 'cp', '"+y')
 vim.keymap.set({ 'n', 'x' }, 'cv', '"+p')
+
 -- Delete without changing the registers
 vim.keymap.set({ 'n', 'x' }, 'x', '"_x')
 
@@ -27,3 +29,7 @@ set_indentation("lua",    2, 2, 2, true)
 set_indentation("javascript", 4, 4, 4, true)
 set_indentation("java", 4, 4, 4, true)
 set_indentation("c", 4, 4, 4, false) -- for tabs instead of spaces
+
+
+-- python config
+vim.g.python3_host_prog = vim.fn.getcwd() .. "/.venv/bin/python"

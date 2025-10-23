@@ -5,7 +5,7 @@
   nixpkgs.config.allowUnfree = true;
 
   # Allow NVIDIA GPU Support
-  nixpkgs.config.cudaSupport = true;
+  nixpkgs.config.cudaSupport = false;
 
   # Allow broken packages
   #nixpkgs.config.allowBroken = true;
@@ -23,28 +23,36 @@
   # Downloading packages
   environment.systemPackages = with pkgs; [
     #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+
+    # Utilities
     nwg-look
     libsForQt5.qt5ct
     qt6ct
     libsForQt5.qtstyleplugin-kvantum
-    wget
-    neovim
-    lazygit
-    fzf
-    fd
-    ripgrep-all
-    clang
     unzip
     ly
     zip 
     fish
-    wineWowPackages.waylandFull
     direnv
+    nix-direnv
     wayland-utils
     wl-clipboard
     gvfs
     udisks
     ffmpeg-full
+    mesa-demos
+    wget
+    clang
+    #--
+
+    # Neovim
+    neovim
+    lazygit
+    fzf
+    fd
+    ripgrep
+    tree-sitter
+    #--
   ];
 
 }

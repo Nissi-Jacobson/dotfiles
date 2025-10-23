@@ -8,41 +8,57 @@
   nixpkgs.config.allowBroken = false;
 
   home.packages = with pkgs; [
+    
+    # Programming
     git
-    firefox
     nodePackages.nodejs
     vscode
+    zed-editor
+    jdk
+    live-server
+    mysql-workbench
+    eclipses.eclipse-jee
+    #--
+    
+    # Utilities
     mpv
-    kdePackages.kdenlive
     kitty
+    feh
+    networkmanagerapplet
+    pandoc
+    neofetch
+    gnome-disk-utility
+    htop
+    wireguard-tools
+    #--
+
+    # Applicatons
+    firefox
+    kdePackages.kdenlive
     qbittorrent
     obsidian
-    zed-editor
-    feh
-    qimgv
-    networkmanagerapplet
-    neofetch
-    fastfetch
-    pandoc
     libreoffice-still
     nautilus
     qalculate-gtk
-    jdk
     librewolf
     audacity
-    osu-lazer-bin
     brave
-    gnome-disk-utility
-    htop
-    ani-cli
     gnome-calendar
-    live-server
-    steam
+    telegram-desktop
+    obs-studio
+    cheese
+    gmetronome
+    protonvpn-gui
+    #--
 
-    (python3.withPackages (ps: with ps; [
-      pip
-      ipython
-    ]))
+    # Games
+    lutris
+    #wineWowPackages.stable
+    winetricks
+    wineWowPackages.waylandFull
+    lumafly
+    #--
 
   ];
+
 }

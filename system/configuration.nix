@@ -29,8 +29,10 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  # Enable bluetooth
-  hardware.bluetooth.enable = true;
+  hardware = {
+    # Enable bluetooth
+    bluetooth.enable = true;
+  };
 
   # Set your time zone.
   time.timeZone = "Asia/Kolkata";
@@ -70,6 +72,7 @@
     };
     # Enable needed desktopManager
     desktopManager = {
+      #gnome.enable = true;
     };
     # Enable CUPS to print documents.
     printing.enable = true;
@@ -114,14 +117,72 @@
         CPU_MIN_PERF_ON_BAT = 0;
         CPU_MAX_PERF_ON_BAT = 20;
 
-       #Optional helps save long term battery health
-       START_CHARGE_THRESH_BAT0 = 40; # 40 and below it starts to charge
-       STOP_CHARGE_THRESH_BAT0 = 80; # 80 and above it stops charging
+        #Optional helps save long term battery health
+        START_CHARGE_THRESH_BAT0 = 40; # 40 and below it starts to charge
+        STOP_CHARGE_THRESH_BAT0 = 80; # 80 and above it stops charging
 
       };
-    };
-  };
 
+    };
+    
+    # # Apache - MariaDB - PHP (LAMP)
+
+    # # Apache
+    # httpd = {
+    #   enable = true;
+    #   adminAddr = "admin@example.com";
+    #   virtualHosts."localhost" = {
+    #     documentRoot = "/var/www/";
+    #     # enablePHP = true;
+    #   };
+    # };
+
+    # MariaDB
+    # Enable Sql
+    # use mysql_secure_installation to complete installationn
+    mysql = {
+      enable = true;
+      package = pkgs.mariadb;
+      #ensureUsers = [
+      #  {
+      #    name = "root";
+      #    password = "6969";  # Change this
+      #  }
+      #  {
+      #    name = "nissi";
+      #    password = "6969";
+      #  }
+      #];
+  
+      ensureDatabases = [ ];  # You can optionally define initial DBs here
+  
+      initialScript = pkgs.writeText "mysql-init.sql" ''
+        -- Remove anonymous users
+        DELETE FROM mysql.user WHERE User = "";
+  
+        -- Disallow root login remotely
+        UPDATE mysql.user SET Host = 'localhost' WHERE User = 'root';
+  
+        -- Remove test database
+        DROP DATABASE IF EXISTS test;
+  
+        -- Grant root full privileges on everything
+        GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' WITH GRANT OPTION;
+
+        -- Reload privilege tables
+        FLUSH PRIVILEGES;
+      '';
+    };
+
+    # # PHP for apache
+    # phpfpm.pools.apache = {
+    #   user = "wwwrun";
+    #   group = "wwwrun";
+    # };
+
+    # gnome keyring for passwords
+    gnome.gnome-keyring.enable = true;
+  };  
 
   # Comment / Uncomment to toggle 
   programs = {
@@ -133,9 +194,19 @@
     # ksshaskpass
     # or for seahorse:
     ssh.askPassword = lib.mkForce "${pkgs.seahorse}/libexec/seahorse/ssh-askpass";
+    steam = {
+      enable = true;
+      remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+      dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+      localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+    };
   };
 
   virtualisation = {
+    waydroid = {
+      enable = true;
+    };
+    lxd.enable = true;
   };
 
 
@@ -156,6 +227,15 @@
 
   # Enable Font Config
   fonts.fontconfig.enable = true;
+
+
+  # user hardware configurations
+  # boot.kernelPackages = pkgs.linuxPackages_latest;
+  # boot.kernelModules = [ "binder_linux" "ashmen_linux"];
+  # boot.extraModulePackages = with config.boot.kernelPackages; [
+  #   # waydroid-modules
+  # ];
+ 
 
   # disabling xterm
   # programs.xterm.enable = false;
@@ -180,6 +260,10 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
+
+  ### networking line to make proton vpn work
+  networking.firewall.checkReversePath = false;
+  ###
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
