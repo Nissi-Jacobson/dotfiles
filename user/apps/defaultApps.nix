@@ -5,10 +5,10 @@
   home.sessionVariables = {
     #QT_QPA_PLATFORMTHEME = "qt5ct";
     #QT_QPA_PLATFORMTHEME_QT6 = "qt6ct";
-    BROWSER = "brave-browser";
-    DEFAULT_BROWSER = "brave-browser";
+    BROWSER = "librewolf";
+    DEFAULT_BROWSER = "librewolf.desktop";
     TERMINAL = "${pkgs.kitty}/bin/kitty";
-    EDITOR = "nvim";
+    EDITOR = "org.gnome.TextEditor";
   };
 
 
@@ -24,21 +24,22 @@
         "x-scheme-handler/terminal" = "kitty.desktop";
 
         # Web Browser
-        "text/html" = "brave-browser.desktop";
-        "x-scheme-handler/http" = "brave-browser.desktop";
-        "x-scheme-handler/https" = "brave-browser.desktop";
-        "x-scheme-handler/about" = "brave-browser.desktop";
-        "x-scheme-handler/unknown" = "brave-browser.desktop";
+        "text/html" = "librewolf.desktop";
+        "x-scheme-handler/http" = "librewolf.desktop";
+        "x-scheme-handler/https" = "librewolf.desktop";
+        "x-scheme-handler/about" = "librewolf.desktop";
+        "x-scheme-handler/unknown" = "librewolf.desktop";
+
 
         # Text Files
-        "text/plain" = "nvim.desktop";
-        "text/x-python" = "nvim.desktop";
-        "text/x-shellscript" = "nvim.desktop";
-        "text/x-makefile" = "nvim.desktop";
-        "application/x-yaml" = "nvim.desktop";
-        "application/json" = "nvim.desktop";
-        "text/markdown" = "nvim.desktop";
-        "text/x-log" = "nvim.desktop";
+        "text/plain" = "org.gnome.TextEditor.desktop";
+        "text/x-python" = "org.gnome.TextEditor.desktop";
+        "text/x-shellscript" = "org.gnome.TextEditor.desktop";
+        "text/x-makefile" = "org.gnome.TextEditor.desktop";
+        "application/x-yaml" = "org.gnome.TextEditor.desktop";
+        "application/json" = "org.gnome.TextEditor.desktop";
+        "text/markdown" = "org.gnome.TextEditor.desktop";
+        "text/x-log" = "org.gnome.TextEditor.desktop";
 
         # Images
         "image/jpeg" = "qimgv.desktop";

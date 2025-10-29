@@ -30,6 +30,8 @@
     gnome-disk-utility
     htop
     wireguard-tools
+    yazi
+    file
     #--
 
     # Applicatons
@@ -49,6 +51,10 @@
     cheese
     gmetronome
     protonvpn-gui
+    onlyoffice-bin
+    kdePackages.okular
+    vlc
+    gnome-text-editor
     #--
 
     # Games
