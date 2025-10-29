@@ -51,7 +51,7 @@
     cheese
     gmetronome
     protonvpn-gui
-    onlyoffice-bin
+    #onlyoffice-bin
     kdePackages.okular
     vlc
     gnome-text-editor
