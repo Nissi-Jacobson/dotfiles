@@ -15,7 +15,7 @@ settings = {
 bind = [ 
   "$mainMod, Return, exec, $terminal"
   "$mainMod, Q, killactive,"
-  "$mainMod, W, exec, pkill -SIGUSR1 waybar || waybar"
+  "$mainMod, W, exec, pkill -SIGKILL waybar || waybar"
   #"$mainMod, M, exit,"
   "$mainMod, M, exec, wlogout"
   "$mainMod, E, exec, $fileManager"
@@ -30,6 +30,9 @@ bind = [
 
   # Hyprlock
   "$mainMod, L, exec, hyprlock"
+
+  # Blue Light Configuration
+  "$mainMod, B, exec, pkill -SIGKILL hyprsunset || hyprsunset -t 4000"
   
   # Move focus with mainMod + arrow keys
   "$mainMod, left, movefocus, l"
@@ -52,22 +55,22 @@ bind = [
   "$mainMod, 0, workspace, 10"
   
   # Move active window to a workspace with mainMod + SHIFT + [0-9]
-  "$mainMod SHIFT, 1, movetoworkspace, 1"
-  "$mainMod SHIFT, 2, movetoworkspace, 2"
-  "$mainMod SHIFT, 3, movetoworkspace, 3"
-  "$mainMod SHIFT, 4, movetoworkspace, 4"
-  "$mainMod SHIFT, 5, movetoworkspace, 5"
-  "$mainMod SHIFT, 6, movetoworkspace, 6"
-  "$mainMod SHIFT, 7, movetoworkspace, 7"
-  "$mainMod SHIFT, 8, movetoworkspace, 8"
-  "$mainMod SHIFT, 9, movetoworkspace, 9"
-  "$mainMod SHIFT, 0, movetoworkspace, 10"
+  "$shiftMod, 1, movetoworkspace, 1"
+  "$shiftMod, 2, movetoworkspace, 2"
+  "$shiftMod, 3, movetoworkspace, 3"
+  "$shiftMod, 4, movetoworkspace, 4"
+  "$shiftMod, 5, movetoworkspace, 5"
+  "$shiftMod, 6, movetoworkspace, 6"
+  "$shiftMod, 7, movetoworkspace, 7"
+  "$shiftMod, 8, movetoworkspace, 8"
+  "$shiftMod, 9, movetoworkspace, 9"
+  "$shiftMod, 0, movetoworkspace, 10"
   
   # Example special workspace (scratchpad)
   #"$mainMod, S, togglespecialworkspace, magic"
-  #"$mainMod SHIFT, S, movetoworkspace, special:magic"
+  #"$shiftMod, S, movetoworkspace, special:magic"
   "$mainMod, R, togglespecialworkspace, Recent-Tabs"
-  "$mainMod SHIFT, R, movetoworkspace, special:Recent-Tabs"
+  "$shiftMod, R, movetoworkspace, special:Recent-Tabs"
   
   # Scroll through existing workspaces with mainMod + scroll
   "$mainMod, mouse_down, workspace, e+1"

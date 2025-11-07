@@ -55,6 +55,9 @@
     kdePackages.okular
     vlc
     gnome-text-editor
+    mangohud
+    logseq
+    hyprsunset
     #--
 
     # Games

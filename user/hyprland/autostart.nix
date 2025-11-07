@@ -17,9 +17,10 @@
         "brightnessctl set 0%"
         #$terminal
         "nm-applet"
-        #"waybar"
+        "waybar"
         "hyprpaper"
         "blueman-applet"
+        #"pkill -SIGKILL hyprsunset || hyprsunset -t 4000"
       ];
     };
   };

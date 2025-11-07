@@ -32,6 +32,10 @@
   hardware = {
     # Enable bluetooth
     bluetooth.enable = true;
+    opengl = {
+      enable = true;
+      driSupport32Bit = true;
+      };
   };
 
   # Set your time zone.
@@ -64,6 +68,9 @@
         layout = "us";
         variant = "colemak";
       };
+
+      #videoDrivers = ["nvidia"];
+      #hardware.nvidia.modesetting.enable = true;
     };
     # Enable Ly terminal display manager
     displayManager = {
@@ -199,7 +206,11 @@
       remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
       dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
       localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+      gamescopeSession.enable = true;
     };
+
+    # gamemode to improve game performance
+    gamemode.enable = true;
   };
 
   virtualisation = {
@@ -263,7 +274,6 @@
 
   ### networking line to make proton vpn work
   networking.firewall.checkReversePath = false;
-  ###
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
