@@ -13,7 +13,6 @@
     git
     nodePackages.nodejs
     vscode
-    zed-editor
     jdk
     live-server
     mysql-workbench
@@ -29,9 +28,7 @@
     neofetch
     gnome-disk-utility
     htop
-    wireguard-tools
     yazi
-    file
     #--
 
     # Applicatons
@@ -43,21 +40,13 @@
     nautilus
     qalculate-gtk
     librewolf
-    audacity
-    brave
-    gnome-calendar
-    telegram-desktop
     obs-studio
-    cheese
     gmetronome
     protonvpn-gui
     #onlyoffice-bin
     kdePackages.okular
-    vlc
     gnome-text-editor
-    mangohud
     logseq
-    hyprsunset
     masterpdfeditor4
     #--
 
