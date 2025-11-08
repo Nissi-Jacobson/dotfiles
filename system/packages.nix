@@ -12,12 +12,22 @@
 
   # Download Fonts
   fonts.packages = with pkgs;[
-    nerd-fonts._0xproto
-    _0xproto
-    nerd-fonts.jetbrains-mono
-    jetbrains-mono
-    times-newer-roman
     #nerd-fonts.symbols-only
+
+    # sans
+    inter-nerdfont
+    ###
+
+    # serif
+    times-newer-roman
+    ###
+
+    # monospace
+    nerd-fonts.fira-code
+    nerd-fonts.jetbrains-mono
+    nerd-fonts._0xproto
+    ###
+
   ];
   
   # Downloading packages

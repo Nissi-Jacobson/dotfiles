@@ -34,8 +34,8 @@
     #};
     polarity = "dark";
     fonts = {
-      serif.name = "0xProto Nerd Font Mono";
-      sansSerif.name = "0xProto Nerd Font Mono";
+      serif.name = "Times Newer Roman";
+      sansSerif.name = "Inter Nerd Font";
       monospace.name = "0xProto Nerd Font Mono";
       sizes = {
         applications = 10;

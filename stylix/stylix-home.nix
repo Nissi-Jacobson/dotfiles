@@ -49,13 +49,13 @@
     #};
     polarity = "dark";
     fonts = {
-      serif.name = "0xProto Nerd Font Mono";
-      sansSerif.name = "0xProto Nerd Font Mono";
+      serif.name = "Times Newer Roman";
+      sansSerif.name = "Inter Nerd Font";
       monospace.name = "0xProto Nerd Font Mono";
       sizes = {
-        applications = 10;
+        applications = 12;
         terminal = 10;
-        desktop = 10;
+        desktop = 12;
         popups = 10;
       };
     };

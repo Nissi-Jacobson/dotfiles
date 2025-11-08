@@ -58,6 +58,7 @@
     mangohud
     logseq
     hyprsunset
+    masterpdfeditor4
     #--
 
     # Games
