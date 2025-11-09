@@ -16,16 +16,19 @@
 
     # sans
     inter-nerdfont
+    nerd-fonts.iosevka
     ###
 
     # serif
     times-newer-roman
+    nerd-fonts.tinos
     ###
 
     # monospace
     nerd-fonts.fira-code
     nerd-fonts.jetbrains-mono
     nerd-fonts._0xproto
+    nerd-fonts.intone-mono
     ###
 
   ];

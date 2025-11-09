@@ -15,7 +15,7 @@ settings = {
 bind = [ 
   "$mainMod, Return, exec, $terminal"
   "$mainMod, Q, killactive,"
-  "$mainMod, W, exec, pkill -SIGKILL waybar || waybar"
+  "$mainMod, W, exec, pkill -SIGUSR1 waybar || waybar & disown"
   #"$mainMod, M, exit,"
   "$mainMod, M, exec, wlogout"
   "$mainMod, E, exec, $fileManager"
@@ -32,7 +32,7 @@ bind = [
   "$mainMod, L, exec, hyprlock"
 
   # Blue Light Configuration
-  "$mainMod, B, exec, pkill -SIGKILL hyprsunset || hyprsunset -t 4000"
+  "$mainMod, B, exec, pkill -SIGUSR1 hyprsunset || hyprsunset -t 4000 & disown"
   
   # Move focus with mainMod + arrow keys
   "$mainMod, left, movefocus, l"

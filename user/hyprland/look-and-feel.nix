@@ -102,7 +102,15 @@
       # windowrulev2 = bordersize 0, floating:0, onworkspace:f[1]
       # windowrulev2 = rounding 0, floating:0, onworkspace:f[1]
       
-        # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
+      # window rule for dunst 
+      windowrulev2 = [
+        "float, class:^(Dunst)$"
+        "size 300 100, class:^(Dunst)$"
+        "move 100%-310 50, class:^(Dunst)$"
+      ];
+      ###
+
+      # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
       dwindle = {
           pseudotile = true; # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
           preserve_split = true; # You probably want this
