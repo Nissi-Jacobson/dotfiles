@@ -58,7 +58,7 @@
         };
 
         "hyprland/window" = {
-          format = "󰖯 {}";
+          format = "󰈈 {}";
           max-length = 40;
           separate-outputs = true;
         };
@@ -143,7 +143,7 @@
         };
 
         "custom/power" = {
-          format = "{}󰐥⏻";
+          format = "{}⏻";
           tooltip = false;
           on-click = "wlogout";
         };
