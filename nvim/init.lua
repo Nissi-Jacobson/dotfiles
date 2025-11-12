@@ -33,3 +33,5 @@ set_indentation("c", 4, 4, 4, false) -- for tabs instead of spaces
 
 -- python config
 vim.g.python3_host_prog = vim.fn.getcwd() .. "/.venv/bin/python"
+---
+

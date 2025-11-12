@@ -10,6 +10,7 @@
     ./apps/default.nix
     inputs.nix-colors.homeManagerModules.default
     ./services/default.nix
+    ./home-programs.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should manage.

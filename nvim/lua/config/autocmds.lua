@@ -6,3 +6,19 @@
 --
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+
+---
+-- ~/.config/nvim/lua/config/autocmds.lua
+local aug = vim.api.nvim_create_augroup("vault_markdown", { clear = true })
+vim.api.nvim_create_autocmd({ "FileType" }, {
+group = aug,
+pattern = { "markdown" },
+callback = function()
+vim.opt_local.spell = true
+vim.opt_local.conceallevel = 2
+vim.opt_local.wrap = true
+vim.opt_local.linebreak = true
+end,
+})
+---
+

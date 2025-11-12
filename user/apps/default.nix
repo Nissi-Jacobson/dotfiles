@@ -9,5 +9,6 @@
     ./sh.nix
     ./qutebrowser.nix
     ./foot.nix
+    ./wezterm.nix
   ];
 }

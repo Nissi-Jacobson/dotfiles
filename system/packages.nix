@@ -56,6 +56,7 @@
     mesa-demos
     wget
     clang
+    gnumake
     #--
 
     # Neovim

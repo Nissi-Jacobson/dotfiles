@@ -13,6 +13,7 @@
     ./input.nix
     ./keybindings.nix
     ./hypr-packages.nix
+    ./hypr-plugins.nix
 #####
     #WALLPAPER#
     #./hyprpaper.nix

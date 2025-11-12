@@ -10,6 +10,7 @@ settings = {
 # See https://wiki.hyprland.org/Configuring/Keywords/
 "$mainMod" = "SUPER"; # Sets "Windows" key as main modifier
 "$shiftMod" = "SUPER_SHIFT";
+"$altMod" = "SUPER_ALT";
 
 # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
 bind = [ 
@@ -65,6 +66,17 @@ bind = [
   "$shiftMod, 8, movetoworkspace, 8"
   "$shiftMod, 9, movetoworkspace, 9"
   "$shiftMod, 0, movetoworkspace, 10"
+
+  # move windows left, right, up, down with vim bindings
+  "$shiftMod, H, movewindow, l"
+  "$shiftMod, L, movewindow, r"
+  "$shiftMod, K, movewindow, u"
+  "$shiftMod, J, movewindow, d"
+
+  "$altMod, right, resizeactive, 10 0"
+  "$altMod, left, resizeactive, -10 0"
+  "$altMod, up, resizeactive, 0 -10"
+  "$altMod, down, resizeactive, 0 10"
   
   # Example special workspace (scratchpad)
   #"$mainMod, S, togglespecialworkspace, magic"

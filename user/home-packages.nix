@@ -29,9 +29,12 @@
     gnome-disk-utility
     htop
     yazi
+    ani-cli
+    ani-skip
+    tmux
     #--
 
-    # Applicatons
+    # Applications
     firefox
     kdePackages.kdenlive
     qbittorrent
@@ -46,7 +49,6 @@
     #onlyoffice-bin
     kdePackages.okular
     gnome-text-editor
-    logseq
     masterpdfeditor4
     #--
 
