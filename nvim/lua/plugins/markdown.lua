@@ -1,26 +1,30 @@
--- ~/.config/nvim/lua/plugins/markdown.lua
-return {
-  {
-    "nvim-treesitter/nvim-treesitter",
-    opts = function(_, opts)
-      opts.ensure_installed = opts.ensure_installed or {}
-      vim.list_extend(opts.ensure_installed, { "markdown", "markdown_inline" })
-    end,
-  },
-  {
-    "lukas-reineke/headlines.nvim",
-    dependencies = "nvim-treesitter/nvim-treesitter",
-    ft = { "markdown" },
-    opts = {
-      markdown = {
-        fat_headlines = true,
-        bullets = { "-", "*", "+" },
+-- Logseq
+return  {
+  "tadmccorkle/markdown.nvim",
+  ft = "markdown",
+  config = function()
+    require("markdown").setup({
+      mappings = {
+        inline_surround_toggle = "gs",
+        inline_surround_toggle_line = "gss",
+        inline_surround_delete = "ds",
+        inline_surround_change = "cs",
+        link_add = "gl",
+        link_follow = "gx",
+        go_curr_heading = "]c",
+        go_parent_heading = "]p",
+        go_next_heading = "]]",
+        go_prev_heading = "[[",
       },
-    },
-  },
-  {
-    "folke/todo-comments.nvim",
-    event = { "BufReadPost", "BufNewFile" },
-    opts = {},
-  },
+      on_attach = function(bufnr)
+        local map = vim.keymap.set
+        local opts = { buffer = bufnr }
+        
+        -- Logseq-like bindings
+        map("n", "<Tab>", "<cmd>lua require('markdown').indent()<cr>", opts)
+        map("n", "<S-Tab>", "<cmd>lua require('markdown').unindent()<cr>", opts)
+      end,
+    })
+  end,
 }
+

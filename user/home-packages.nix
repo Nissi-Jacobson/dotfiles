@@ -26,12 +26,12 @@
     networkmanagerapplet
     pandoc
     neofetch
-    gnome-disk-utility
     htop
     yazi
     ani-cli
     ani-skip
     tmux
+    kdePackages.filelight
     #--
 
     # Applications
@@ -39,6 +39,7 @@
     kdePackages.kdenlive
     qbittorrent
     obsidian
+    logseq
     libreoffice-still
     nautilus
     qalculate-gtk

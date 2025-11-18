@@ -66,6 +66,9 @@
     fd
     ripgrep
     tree-sitter
+    tectonic-unwrapped
+    imagemagick
+    luajitPackages.magick
     #--
   ];
 

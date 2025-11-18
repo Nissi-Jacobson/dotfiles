@@ -10,5 +10,6 @@
     ./qutebrowser.nix
     ./foot.nix
     ./wezterm.nix
+    ./neovim.nix
   ];
 }

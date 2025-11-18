@@ -1,0 +1,201 @@
+-- plugins/markdown-outliner.lua
+-- Logseq-like workflow with Markdown for cross-platform compatibility
+
+return {
+  -- Markdown outliner with bullets
+  {
+    "tadmccorkle/markdown.nvim",
+    ft = "markdown",
+    config = function()
+      require("markdown").setup({
+        mappings = {
+          inline_surround_toggle = "gs",
+          inline_surround_toggle_line = "gss",
+          inline_surround_delete = "ds",
+          inline_surround_change = "cs",
+          link_add = "gl",
+          link_follow = "gx",
+          go_curr_heading = "]c",
+          go_parent_heading = "]p",
+          go_next_heading = "]]",
+          go_prev_heading = "[[",
+        },
+        on_attach = function(bufnr)
+          local map = vim.keymap.set
+          local opts = { buffer = bufnr }
+          
+          -- Logseq-like bindings
+          map("n", "<Tab>", "<cmd>lua require('markdown').indent()<cr>", opts)
+          map("n", "<S-Tab>", "<cmd>lua require('markdown').unindent()<cr>", opts)
+        end,
+      })
+    end,
+  },
+
+  -- Better bullet handling
+  {
+    "bullets-vim/bullets.vim",
+    ft = { "markdown", "text" },
+    config = function()
+      vim.g.bullets_enabled_file_types = { "markdown", "text" }
+      vim.g.bullets_outline_levels = { "ROM", "ABC", "num", "abc", "rom", "std-" }
+      -- Automatically continue bullets
+      vim.g.bullets_renumber_on_change = 1
+      vim.g.bullets_auto_indent_after_colon = 1
+    end,
+  },
+
+
+  -- Obsidian/Logseq-like note management
+  {
+    "epwalsh/obsidian.nvim",
+    version = "*",
+    lazy = true,
+    ft = "markdown",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    opts = {
+      workspaces = {
+        {
+          name = "notes",
+          path = "~/notes",
+        },
+      },
+      
+      -- Daily notes (like Logseq journals)
+      daily_notes = {
+        folder = "journals",
+        date_format = "%Y-%m-%d",
+        template = nil,
+      },
+
+      -- Completion for [[links]]
+      completion = {
+        nvim_cmp = true,
+        min_chars = 2,
+      },
+
+      -- Template support
+      templates = {
+        folder = "templates",
+        date_format = "%Y-%m-%d",
+        time_format = "%H:%M",
+      },
+
+      -- Customize how note IDs are generated
+      note_id_func = function(title)
+        local suffix = ""
+        if title ~= nil then
+          suffix = title:gsub(" ", "-"):gsub("[^A-Za-z0-9-]", ""):lower()
+        else
+          for _ = 1, 4 do
+            suffix = suffix .. string.char(math.random(65, 90))
+          end
+        end
+        return tostring(os.date("%Y%m%d%H%M%S")) .. "-" .. suffix
+      end,
+
+      -- Image handling
+      attachments = {
+        img_folder = "assets/imgs",
+      },
+
+      -- Follow links
+      follow_url_func = function(url)
+        vim.fn.jobstart({"open", url})
+      end,
+
+      -- Disable default mappings (we'll set custom ones)
+      mappings = {},
+    },
+    keys = {
+      { "<leader>on", "<cmd>ObsidianNew<cr>", desc = "New note" },
+      { "<leader>oo", "<cmd>ObsidianOpen<cr>", desc = "Open in Obsidian" },
+      { "<leader>ob", "<cmd>ObsidianBacklinks<cr>", desc = "Backlinks" },
+      { "<leader>ot", "<cmd>ObsidianToday<cr>", desc = "Today's note" },
+      { "<leader>oy", "<cmd>ObsidianYesterday<cr>", desc = "Yesterday's note" },
+      { "<leader>of", "<cmd>ObsidianSearch<cr>", desc = "Search notes" },
+      { "<leader>ol", "<cmd>ObsidianLinks<cr>", desc = "Show links" },
+      { "<leader>oq", "<cmd>ObsidianQuickSwitch<cr>", desc = "Quick switch" },
+      { "<leader>ch", "<cmd>ObsidianToggleCheckbox<cr>", desc = "Toggle checkbox" },
+      { "gf", function()
+        if require("obsidian").util.cursor_on_markdown_link() then
+          return "<cmd>ObsidianFollowLink<cr>"
+        else
+          return "gf"
+        end
+      end, desc = "Follow link", expr = true },
+    },
+  },
+
+  -- Makes Headlines standout more even with bullets
+  {
+    "lukas-reineke/headlines.nvim",
+    dependencies = "nvim-treesitter/nvim-treesitter",
+    ft = "markdown",
+    opts = {
+      markdown = {
+        headline_highlights = {
+          "Headline1",
+          "Headline2", 
+          "Headline3",
+          "Headline4",
+        },
+        fat_headlines = false, -- Makes headings stand out more
+        bullets = {},
+      },
+    },
+  },
+
+  -- Image preview in terminal
+  {
+    "3rd/image.nvim",
+    build = false,
+    ft = "markdown",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    opts = {
+      backend = "kitty",
+      processor = "magick_cli",
+      integrations = {
+        markdown = {
+          enabled = true,
+          clear_in_insert_mode = false,
+          download_remote_images = true,
+          only_render_image_at_cursor = false,
+          only_render_image_at_cursor_line = false,
+        },
+      },
+      max_width = 100,
+      max_height = 12,
+      max_height_window_percentage = math.huge,
+      max_width_window_percentage = math.huge,
+    },
+  },
+
+  -- Markdown preview in browser (for complex rendering)
+  {
+    "iamcco/markdown-preview.nvim",
+    keys = {
+      {
+        "<leader>mp",
+        ft = "markdown",
+        "<cmd>MarkdownPreviewToggle<cr>",
+        desc = "Markdown Preview",
+      },
+    },
+    init = function()
+      -- The default filename is 「${name}」and I just hate those symbols
+      vim.g.mkdp_page_title = "${name}"
+    end,
+  },
+ 
+  -- Better markdown folding
+  -- install without yarn or npm
+  {
+    "masukomi/vim-markdown-folding",
+    ft = "markdown",
+  },
+}
