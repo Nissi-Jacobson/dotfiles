@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   # Allow unfree packages
@@ -12,7 +12,9 @@
     # Programming
     git
     nodePackages.nodejs
-    vscode
+    vscode-fhs
+    zed-editor
+    #vscodium
     jdk
     live-server
     mysql-workbench
@@ -50,7 +52,11 @@
     #onlyoffice-bin
     kdePackages.okular
     gnome-text-editor
+    gnome-system-monitor
     masterpdfeditor4
+    cheese
+    inputs.zen-browser.packages.${ pkgs.system }.default
+    brave
     #--
 
     # Games

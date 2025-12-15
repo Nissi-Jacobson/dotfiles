@@ -6,7 +6,9 @@
     direnv.enable = true;
     fish.enable = true;
     nm-applet.enable = true;
-    hyprland.enable = true;
+    # hyprland.enable = true;
+    niri.enable = true;
+    xwayland.enable = true;
     kdeconnect.enable = true;
     # ksshaskpass
     # or for seahorse:

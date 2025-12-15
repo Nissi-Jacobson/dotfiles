@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 {
   programs.waybar = {
     enable = true;
@@ -9,7 +9,7 @@
         height = 24;
         spacing = 2;
         margin-top = 2;
-        margin-bottom = 0;
+        margin-bottom = 2;
         margin-left = 4;
         margin-right = 4;
         
@@ -83,9 +83,9 @@
 
         temperature = {
           critical-threshold = 80;
-          format-critical = "󰈸 {temperatureC}°C";
+          format-critical = "󰸁 {temperatureC}°C";
           format = "󰔏 {temperatureC}°";
-          format-icons = ["󰜗" "󰔏" "󰈸"];
+          format-icons = ["󰜗" "󰔏" "󰸁"];
         };
 
         battery = {
@@ -98,7 +98,7 @@
           format-charging = "󰂄 {capacity}%";
           format-plugged = "󰚥 {capacity}%";
           format-alt = "{icon} {time}";
-          format-icons = ["󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
+          format-icons = ["󰂎" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
         };
 
         network = {
@@ -107,14 +107,14 @@
           tooltip-format = "{ifname}: {ipaddr}";
           format-linked = "󰈀 No IP";
           format-disconnected = "󰤭 Disconnected";
-          format-alt = " {ipaddr}/{cidr}";
+          format-alt = "󰩟 {ipaddr}/{cidr}";
         };
 
         pulseaudio = {
           format = "{icon} {volume}%";
           format-bluetooth = "{icon}󰂯 {volume}%";
-          format-bluetooth-muted = "󰝟󰂯";
-          format-muted = "󰝟";
+          format-bluetooth-muted = "󰟎󰂯";
+          format-muted = "󰟎";
           format-source = "󰍬 {volume}%";
           format-source-muted = "󰍭";
           format-icons = {
@@ -132,8 +132,8 @@
         idle_inhibitor = {
           format = "{icon}";
           format-icons = {
-            activated = "";
-            deactivated = "";
+            activated = "󰒳";
+            deactivated = "󰒲";
           };
         };
 
@@ -143,43 +143,43 @@
         };
 
         "custom/power" = {
-          format = "{icon}⏻";
+          format = "{}⏻";
           tooltip = false;
           on-click = "wlogout";
         };
       };
     };
 
-    style = ''
+    style = with config.lib.stylix.colors.withHashtag; ''
       * {
-        font-family: "0xProto Nerd Font Mono", "JetBrains Mono Nerd Font";
+        font-family: "${config.stylix.fonts.monospace.name}";
         font-size: 11px;
         min-height: 0;
       }
 
       window#waybar {
         background: transparent;
-        color: #c0caf5;
+        color: ${base05};
       }
 
       tooltip {
-        background: #1a1b26;
-        border: 1px solid #7aa2f7;
+        background: ${base00};
+        border: 1px solid ${base0D};
         border-radius: 4px;
-        color: #c0caf5;
+        color: ${base05};
       }
 
       #workspaces {
-        background: #24283b;
+        background: ${base01};
         border-radius: 8px;
         margin: 2px;
         padding: 0px 4px;
-        border: 1px solid #414868;
+        border: 1px solid ${base03};
       }
 
       #workspaces button {
         background: transparent;
-        color: #7aa2f7;
+        color: ${base0D};
         border-radius: 6px;
         padding: 2px 6px;
         margin: 1px;
@@ -188,45 +188,45 @@
       }
 
       #workspaces button:hover {
-        background: #414868;
-        color: #c0caf5;
+        background: ${base03};
+        color: ${base05};
       }
 
       #workspaces button.active {
-        background: #7aa2f7;
-        color: #1a1b26;
+        background: ${base0D};
+        color: ${base00};
       }
 
       #workspaces button.urgent {
-        background: #f7768e;
-        color: #1a1b26;
+        background: ${base08};
+        color: ${base00};
       }
 
       #mode {
-        background: #f7768e;
-        color: #1a1b26;
+        background: ${base08};
+        color: ${base00};
         border-radius: 8px;
         margin: 2px;
         padding: 0px 6px;
-        border: 1px solid #f7768e;
+        border: 1px solid ${base08};
       }
 
       #window {
-        background: #24283b;
+        background: ${base01};
         border-radius: 8px;
         margin: 2px;
         padding: 0px 8px;
-        border: 1px solid #414868;
-        color: #c0caf5;
+        border: 1px solid ${base03};
+        color: ${base05};
       }
 
       #clock {
-        background: #24283b;
+        background: ${base01};
         border-radius: 8px;
         margin: 2px;
         padding: 0px 8px;
-        border: 1px solid #414868;
-        color: #c0caf5;
+        border: 1px solid ${base03};
+        color: ${base05};
         font-weight: bold;
       }
 
@@ -238,91 +238,91 @@
       #pulseaudio,
       #tray,
       #idle_inhibitor {
-        background: #24283b;
+        background: ${base01};
         border-radius: 8px;
         margin: 2px;
         padding: 0px 6px;
-        border: 1px solid #414868;
-        color: #c0caf5;
+        border: 1px solid ${base03};
+        color: ${base05};
       }
 
       #cpu {
-        color: #9ece6a;
+        color: ${base0B};
       }
 
       #memory {
-        color: #e0af68;
+        color: ${base0A};
       }
 
       #temperature {
-        color: #ff9e64;
+        color: ${base09};
       }
 
       #temperature.critical {
-        color: #f7768e;
-        border-color: #f7768e;
+        color: ${base08};
+        border-color: ${base08};
       }
 
       #battery {
-        color: #9ece6a;
+        color: ${base0B};
       }
 
       #battery.charging {
-        color: #e0af68;
+        color: ${base0A};
       }
 
       #battery.warning:not(.charging) {
-        color: #e0af68;
-        border-color: #e0af68;
+        color: ${base0A};
+        border-color: ${base0A};
       }
 
       #battery.critical:not(.charging) {
-        color: #f7768e;
-        border-color: #f7768e;
+        color: ${base08};
+        border-color: ${base08};
       }
 
       #network {
-        color: #7aa2f7;
+        color: ${base0D};
       }
 
       #network.disconnected {
-        color: #f7768e;
-        border-color: #f7768e;
+        color: ${base08};
+        border-color: ${base08};
       }
 
       #pulseaudio {
-        color: #bb9af7;
+        color: ${base0E};
       }
 
       #pulseaudio.muted {
-        color: #565f89;
+        color: ${base03};
       }
 
       #idle_inhibitor {
-        color: #e0af68;
+        color: ${base0A};
       }
 
       #idle_inhibitor.activated {
-        color: #f7768e;
-        border-color: #f7768e;
+        color: ${base08};
+        border-color: ${base08};
       }
 
       #tray {
-        color: #c0caf5;
+        color: ${base05};
       }
 
       #custom-power {
         background: transparent;
-        color: #1a1b26;
+        color: ${base00};
         border-radius: 8px;
         margin: 2px;
         padding: 0px 6px;
-        border: 1px solid #414868;
+        border: 1px solid ${base03};
         font-size: 12px;
       }
 
       #custom-power:hover {
-        background: #ff7a93;
+        background: ${base08};
         transition: all 0.3s ease-in-out;
       }
     '';

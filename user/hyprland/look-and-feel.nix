@@ -28,7 +28,7 @@
           # Please see https://wiki.hyprland.org/Configuring/Tearing/ before you turn this on
           allow_tearing = false;
       
-          layout = "dwindle"; # dwindle master scrolling
+          layout = "scrolling"; # dwindle master scrolling
       };
       
       # https://wiki.hyprland.org/Configuring/Variables/#decoration

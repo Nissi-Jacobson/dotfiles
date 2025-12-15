@@ -4,13 +4,15 @@
 
   # importing modules
   imports = [
-    ./hyprland/hyprland.nix
-    ../stylix/stylix-home.nix
-    ./home-packages.nix
-    ./apps/default.nix
+    #./hyprland/hyprland.nix
     inputs.nix-colors.homeManagerModules.default
+    ./niri/default.nix
+    ../stylix/stylix-home.nix
+    ./apps/default.nix
     ./services/default.nix
+    ./home-packages.nix
     ./home-programs.nix
+    ./daemons/default.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should manage.
@@ -20,6 +22,11 @@
   # home.stateVersion = "25.05"; # DO NOT EDIT
   home.stateVersion = "25.05"; # edited to be the same with system packages
 
+  # session variables
+  home.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+  };
+
   # adding dotfiles
   home = {
     file = {
@@ -27,6 +34,8 @@
       ".config/hypr/hyprshot.conf".text = ''
           save_path = "~/Pictures/Screenshots/";
         '';
+      ".config/niri/config.kdl".source = config.lib.file.mkOutOfStoreSymlink "/home/nissi/dotfiles/user/niri/config.kdl";
+      ".config/sunsetr/".source = config.lib.file.mkOutOfStoreSymlink "/home/nissi/dotfiles/user/sunsetr/";
     };
   };
 

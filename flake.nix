@@ -6,13 +6,25 @@
 
     # nix pkgs
     nixpkgs.url = "github:NixOs/nixpkgs/master";
+
     # home manager
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
     # nix colors
     nix-colors.url = "github:misterio77/nix-colors";
+
     # stylix
     stylix.url = "github:danth/stylix/master";
+    stylix.inputs.nixpkgs.follows = "nixpkgs";
+
+    # Zen Browser
+    zen-browser.url = "github:youwen5/zen-browser-flake";
+    zen-browser.inputs.nixpkgs.follows = "nixpkgs";
+
+    # Sunsetr
+    sunsetr.url = "github:psi4j/sunsetr";
+    sunsetr.inputs.nixpkgs.follows = "nixpkgs";
 
   };
 

@@ -8,6 +8,7 @@
       package = pkgs.candy-icons;
     };
   };
+
   # qt theme
   qt = {
     enable = true;
@@ -24,6 +25,7 @@
       qt.enable = true;
       gtk.enable = true;
       gnome.enable = true;
+      sway.enable = true;
     };
     base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
     #base16Scheme = {

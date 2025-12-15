@@ -25,7 +25,7 @@
     #../theme.nix
 #####
     #WAYBAR#
-    ./waybar.nix
+    #./waybar.nix
     #./waybar/default.nix
 #####
     #Lock Screen#

@@ -11,6 +11,7 @@ settings = {
 "$mainMod" = "SUPER"; # Sets "Windows" key as main modifier
 "$shiftMod" = "SUPER_SHIFT";
 "$altMod" = "SUPER_ALT";
+"$ctrlMod" = "SUPER_CTRL";
 
 # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
 bind = [ 
@@ -99,6 +100,20 @@ bind = [
   #", mouse:275, sendshortcut, CTRL, z"      # Undo
   #", mouse:276, sendshortcut, CTRL, y"      # Redo
 
+  # binds for hyprscrolling
+  "$mainMod, period, layoutmsg, move +col"
+  "$mainMod, comma, layoutmsg, move -col"
+
+  "$ctrlMod, L, layoutmsg, move +col"
+  "$ctrlMod, H, layoutmsg, move -col"
+  #"$shiftMod, L, layoutmsg, movewindowto r"
+  #"$shiftMod, H, layoutmsg, movewindowto l"
+
+
+  "$mainMod SHIFT, period, layoutmsg, movewindowto r"
+  "$mainMod SHIFT, comma, layoutmsg, movewindowto l"
+  "$mainMod SHIFT, up, layoutmsg, movewindowto u"
+  "$mainMod SHIFT, down, layoutmsg, movewindowto d"
 ];
 
 # Move/resize windows with mainMod + LMB/RMB and dragging

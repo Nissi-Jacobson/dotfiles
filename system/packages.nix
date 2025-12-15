@@ -57,6 +57,7 @@
     wget
     clang
     gnumake
+    docker-compose
     #--
 
     # Neovim

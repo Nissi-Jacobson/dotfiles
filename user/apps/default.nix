@@ -11,5 +11,6 @@
     ./foot.nix
     ./wezterm.nix
     ./neovim.nix
+    ./wofi.nix
   ];
 }

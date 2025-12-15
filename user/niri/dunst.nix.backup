@@ -1,0 +1,50 @@
+  # Dunst notification daemon
+  services.dunst = {
+    enable = true;
+    settings = {
+      global = {
+        width = 300;
+        height = 300;
+        offset = "30x50";
+        origin = "top-right";
+        transparency = 10;
+        frame_color = "#7aa2f7";
+        frame_width = 2;
+        corner_radius = 8;
+        font = "JetBrains Mono 10";
+        format = "<b>%s</b>\\n%b";
+        alignment = "left";
+        word_wrap = true;
+        ignore_newline = false;
+        show_indicators = true;
+        icon_position = "left";
+        max_icon_size = 64;
+        sticky_history = true;
+        history_length = 20;
+        browser = "firefox";
+        mouse_left_click = "close_current";
+        mouse_middle_click = "do_action";
+        mouse_right_click = "close_all";
+      };
+
+      urgency_low = {
+        background = "#1a1b26";
+        foreground = "#c0caf5";
+        timeout = 5;
+      };
+
+      urgency_normal = {
+        background = "#1a1b26";
+        foreground = "#c0caf5";
+        timeout = 10;
+      };
+
+      urgency_critical = {
+        background = "#1a1b26";
+        foreground = "#f7768e";
+        frame_color = "#f7768e";
+        timeout = 0;
+      };
+    };
+  };
+

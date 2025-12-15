@@ -1,16 +1,10 @@
 --logseq
 return {
-    "iamcco/markdown-preview.nvim",
-    keys = {
-      {
-        "<leader>mp",
-        ft = "markdown",
-        "<cmd>MarkdownPreviewToggle<cr>",
-        desc = "Markdown Preview",
-      },
-    },
-    init = function()
-      -- The default filename is 「${name}」and I just hate those symbols
-      vim.g.mkdp_page_title = "${name}"
-    end,
-  }
+  "iamcco/markdown-preview.nvim",
+  cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+  build = "cd app && npm install",
+  init = function()
+    vim.g.mkdp_filetypes = { "markdown" }
+  end,
+  ft = { "markdown" },
+}

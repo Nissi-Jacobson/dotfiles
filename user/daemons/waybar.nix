@@ -1,28 +1,27 @@
-{ config, ... }:
+{ config, pkgs, ... }:
+
 {
   programs.waybar = {
     enable = true;
+
+    # No CSS → Stylix themes it
+
     settings = {
+      # Main Waybar JSON config as Nix
       mainBar = {
         layer = "top";
         position = "top";
         height = 24;
-        spacing = 2;
-        margin-top = 2;
-        margin-bottom = 0;
-        margin-left = 4;
-        margin-right = 4;
-        
-        modules-left = [
+
+        modules-left = [ 
+        # "custom/workspaces" 
+          "niri/workspaces"
           "hyprland/workspaces"
-          "hyprland/mode"
           "hyprland/window"
+          "niri/window"
+
         ];
-        
-        modules-center = [
-          "clock"
-        ];
-        
+        modules-center = [ "clock" ];
         modules-right = [
           "tray"
           #"idle_inhibitor"
@@ -35,7 +34,26 @@
           "custom/power"
         ];
 
-        # Module configurations
+        "niri/workspaces" = {
+          format = "{icon}";
+          "format-icons" = {
+            "1" = "1";
+            "2" = "2";
+            "3" = "3";
+            "4" = "4";
+            "5" = "5";
+            "6" = "6";
+            "7" = "7";
+            "8" = "8";
+            "9" = "9";
+            "10" = "10";
+            urgent = "●";
+            focused = "●";
+            default = "○";
+
+          };
+        };
+
         "hyprland/workspaces" = {
           disable-scroll = true;
           all-outputs = true;
@@ -57,6 +75,12 @@
           };
         };
 
+        "niri/window" = {
+          format = "{title}";
+          "max-length" = 333;
+          "seperate-outputs" = true;
+        };
+
         "hyprland/window" = {
           format = "󰈈 {}";
           max-length = 40;
@@ -67,7 +91,7 @@
           timezone = "Asia/Kolkata";
           tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
           format = "󰥔 {:%H:%M}";
-          format-alt = "󰃭 {:%m/%d %H:%M}";
+          format-alt = "󰃭 {:%d/%m %H:%M}";
         };
 
         cpu = {
@@ -326,5 +350,6 @@
         transition: all 0.3s ease-in-out;
       }
     '';
+
   };
 }
