@@ -5,17 +5,17 @@
   inputs = {
 
     # nix pkgs
-    nixpkgs.url = "github:NixOs/nixpkgs/master";
+    nixpkgs.url = "github:NixOs/nixpkgs/nixos-25.11";
 
     # home manager
-    home-manager.url = "github:nix-community/home-manager/master";
+    home-manager.url = "github:nix-community/home-manager/release-25.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     # nix colors
     nix-colors.url = "github:misterio77/nix-colors";
 
     # stylix
-    stylix.url = "github:danth/stylix/master";
+    stylix.url = "github:danth/stylix/release-25.11";
     stylix.inputs.nixpkgs.follows = "nixpkgs";
 
     # Zen Browser

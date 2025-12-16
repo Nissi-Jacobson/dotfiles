@@ -30,7 +30,7 @@
 
     # Enable needed desktopManager
     desktopManager = {
-      #gnome.enable = true;
+      # gnome.enable = true;
     };
  
     # Enable CUPS to print documents.

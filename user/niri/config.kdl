@@ -262,9 +262,9 @@ layout {
 // See the binds section below for more spawn examples.
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
+spawn-at-startup "waybar"
 spawn-at-startup "nm-applet"
 spawn-at-startup "blueman-applet"
-spawn-at-startup "waybar"
 spawn-at-startup "wpaperd"  // enabled as a user service
 spawn-at-startup "sunsetr"
 spawn-at-startup "xwayland-satellite"

@@ -1,4 +1,4 @@
-{ config, nix-colors, inputs, lib, ... }:
+{ config, nix-colors, inputs, lib, pkgs, ... }:
 
 {
 
@@ -26,6 +26,7 @@
   home.sessionVariables = {
     NIXOS_OZONE_WL = "1";
   };
+
 
   # adding dotfiles
   home = {

@@ -12,14 +12,18 @@
     # Programming
     git
     nodePackages.nodejs
-    vscode-fhs
+    vscode
     zed-editor
     #vscodium
     jdk
-    pango
     live-server
     mysql-workbench
+    jetbrains.idea-community-bin
     eclipses.eclipse-jee
+    fontconfig
+    freetype
+    pango
+    cairo
     #--
     
     # Utilities
@@ -65,6 +69,7 @@
     #wineWowPackages.stable
     winetricks
     wineWowPackages.waylandFull
+    heroic
     lumafly
     #--
 
