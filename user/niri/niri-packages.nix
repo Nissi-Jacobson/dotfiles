@@ -1,9 +1,9 @@
 { config, pkgs, inputs, ... }:{
 
   home.packages = [
-    pkgs.gnome-keyring
-    pkgs.xdg-desktop-portal-gtk
-    pkgs.xdg-desktop-portal-gnome
+    # pkgs.gnome-keyring
+    # pkgs.xdg-desktop-portal-gtk
+    # pkgs.xdg-desktop-portal-gnome
     #pkgs.kdePackages.polkit-kde-agent-1
     pkgs.xwayland
     pkgs.xwayland-satellite

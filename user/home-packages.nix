@@ -16,6 +16,7 @@
     zed-editor
     #vscodium
     jdk
+    pango
     live-server
     mysql-workbench
     eclipses.eclipse-jee

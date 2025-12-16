@@ -16,6 +16,5 @@
         };
       };
     };
-    lxd.enable = true;
   };
 }
