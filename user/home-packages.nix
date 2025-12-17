@@ -20,10 +20,6 @@
     mysql-workbench
     jetbrains.idea-community-bin
     eclipses.eclipse-jee
-    fontconfig
-    freetype
-    pango
-    cairo
     #--
     
     # Utilities
@@ -60,7 +56,7 @@
     gnome-system-monitor
     masterpdfeditor4
     cheese
-    inputs.zen-browser.packages.${ pkgs.system }.default
+    inputs.zen-browser.packages.${ pkgs.stdenv.hostPlatform.system }.default
     brave
     #--
 

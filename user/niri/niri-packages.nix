@@ -7,7 +7,7 @@
     #pkgs.kdePackages.polkit-kde-agent-1
     pkgs.xwayland
     pkgs.xwayland-satellite
-    inputs.sunsetr.packages.${ pkgs.system }.sunsetr
+    inputs.sunsetr.packages.${ pkgs.stdenv.hostPlatform.system }.sunsetr
     pkgs.wofi
     pkgs.waybar
     pkgs.dunst

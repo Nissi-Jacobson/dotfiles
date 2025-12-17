@@ -46,18 +46,12 @@
     ly
     zip 
     fish
-    direnv
-    nix-direnv
     wayland-utils
     wl-clipboard
     gvfs
     udisks
     ffmpeg-full
-    mesa-demos
     wget
-    clang
-    gnumake
-    docker-compose
     #--
 
     # Neovim
@@ -70,6 +64,11 @@
     tectonic-unwrapped
     imagemagick
     luajitPackages.magick
+    #--
+
+    
+    # Programming
+    clang
     #--
   ];
 
