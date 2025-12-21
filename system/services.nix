@@ -90,6 +90,16 @@
     # gnome keyring for passwords
     gnome.gnome-keyring.enable = true;
 
+    # WIFI HOTSPOT (not perfect)
+    create_ap = {
+      enable = false;
+      settings = {
+        INTERNET_IFACE = "eth0";
+        WIFI_IFACE = "wlan0";
+        SSID = "2X";
+        PASSPHRASE = "12345678";
+      };
+    };
   };
 
 }

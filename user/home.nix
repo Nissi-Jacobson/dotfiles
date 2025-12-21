@@ -6,7 +6,8 @@
   imports = [
     #./hyprland/hyprland.nix
     inputs.nix-colors.homeManagerModules.default
-    ./niri/default.nix
+    # ./niri/default.nix
+    ./hyprland/hyprland.nix
     ../stylix/stylix-home.nix
     ./apps/default.nix
     ./services/default.nix
@@ -24,7 +25,7 @@
 
   # session variables
   home.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
+    # NIXOS_OZONE_WL = "1";
   };
 
 
@@ -35,7 +36,7 @@
       ".config/hypr/hyprshot.conf".text = ''
           save_path = "~/Pictures/Screenshots/";
         '';
-      ".config/niri/config.kdl".source = config.lib.file.mkOutOfStoreSymlink "/home/nissi/dotfiles/user/niri/config.kdl";
+      # ".config/niri/config.kdl".source = config.lib.file.mkOutOfStoreSymlink "/home/nissi/dotfiles/user/niri/config.kdl";
       ".config/sunsetr/".source = config.lib.file.mkOutOfStoreSymlink "/home/nissi/dotfiles/user/sunsetr/";
     };
   };

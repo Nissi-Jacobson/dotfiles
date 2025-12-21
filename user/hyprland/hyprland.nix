@@ -25,8 +25,7 @@
     #../theme.nix
 #####
     #WAYBAR#
-    #./waybar.nix
-    #./waybar/default.nix
+    #../daemons/waybar.nix
 #####
     #Lock Screen#
     ./hyprlock.nix
@@ -35,6 +34,6 @@
     ./hypridle.nix
 #####
     #WLOGOUT#
-    ./wlogout.nix
+    #./wlogout.nix
   ];
 }

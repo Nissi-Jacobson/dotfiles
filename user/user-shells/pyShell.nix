@@ -8,19 +8,6 @@ pkgs.mkShell {
       pip
       numpy
       pandas
-      matplotlib
-      scikit-learn
-      scipy
-      #logpy
-      sympy
-      ipython
-      pybrowsers
-      selenium
-      requests
-      pyppeteer
-      pyquery
-      pygame
-      jaraco-itertools
     ]))
   ];
 }

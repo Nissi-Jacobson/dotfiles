@@ -14,16 +14,15 @@
     nodePackages.nodejs
     vscode
     zed-editor
-    #vscodium
-    jdk
     live-server
     mysql-workbench
-    jetbrains.idea-community-bin
     eclipses.eclipse-jee
+    jdk
     #--
     
     # Utilities
     mpv
+    vlc
     kitty
     feh
     networkmanagerapplet
@@ -34,7 +33,11 @@
     ani-cli
     ani-skip
     tmux
+    glib
     kdePackages.filelight
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal-gnome
+    kdePackages.polkit-kde-agent-1
     #--
 
     # Applications

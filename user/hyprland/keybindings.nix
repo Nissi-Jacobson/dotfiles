@@ -23,18 +23,39 @@ bind = [
   "$mainMod, E, exec, $fileManager"
   "$mainMod, V, togglefloating,"
   "$mainMod, A, exec, $menu"
-  "$mainMod, P, pseudo, # dwindle"
-  "$mainMod, J, togglesplit, # dwindle"
+  #"$mainMod, P, pseudo, # dwindle"
+  #"$mainMod, J, togglesplit, # dwindle"
 
   # ScreenShot
   " , PRINT, exec, hyprshot -m window -o ~/Pictures/Screenshots/"
   "$shiftMod, S, exec, hyprshot -m region -o ~/Pictures/Screenshots/"
 
   # Hyprlock
-  "$mainMod, L, exec, hyprlock"
+  #"$mainMod, L, exec, hyprlock"
 
   # Blue Light Configuration
   "$mainMod, B, exec, pkill -SIGUSR1 hyprsunset || hyprsunset -t 4000 & disown"
+
+  # vim bindings
+  # move windows left, right, up, down with vim bindings
+  # "$shiftMod, H, movewindow, l"
+  # "$shiftMod, L, movewindow, r"
+  # "$shiftMod, K, movewindow, u"
+  # "$shiftMod, J, movewindow, d"
+
+  "$ctrlMod, L, layoutmsg, move +col"
+  "$ctrlMod, H, layoutmsg, move -col"
+
+  "$mainMod, L, movefocus, r"
+  "$mainMod, H, movefocus, l"
+  "$mainMod, K, movefocus, u"
+  "$mainMod, J, movefocus, d"
+
+  "$mainMod SHIFT, L, layoutmsg, movewindowto r"
+  "$mainMod SHIFT, H, layoutmsg, movewindowto l"
+  "$mainMod SHIFT, K, layoutmsg, movewindowto u"
+  "$mainMod SHIFT, J, layoutmsg, movewindowto d"
+
   
   # Move focus with mainMod + arrow keys
   "$mainMod, left, movefocus, l"
@@ -68,12 +89,6 @@ bind = [
   "$shiftMod, 9, movetoworkspace, 9"
   "$shiftMod, 0, movetoworkspace, 10"
 
-  # move windows left, right, up, down with vim bindings
-  "$shiftMod, H, movewindow, l"
-  "$shiftMod, L, movewindow, r"
-  "$shiftMod, K, movewindow, u"
-  "$shiftMod, J, movewindow, d"
-
   "$altMod, right, resizeactive, 10 0"
   "$altMod, left, resizeactive, -10 0"
   "$altMod, up, resizeactive, 0 -10"
@@ -101,19 +116,22 @@ bind = [
   #", mouse:276, sendshortcut, CTRL, y"      # Redo
 
   # binds for hyprscrolling
-  "$mainMod, period, layoutmsg, move +col"
-  "$mainMod, comma, layoutmsg, move -col"
+  # other keymaps are mentioned near vim bindings
 
-  "$ctrlMod, L, layoutmsg, move +col"
-  "$ctrlMod, H, layoutmsg, move -col"
   #"$shiftMod, L, layoutmsg, movewindowto r"
   #"$shiftMod, H, layoutmsg, movewindowto l"
 
+  # increase & decrease window size
+  "$mainMod, period, layoutmsg, colresize +conf"
+  "$mainMod, comma, layoutmsg, colresize -conf"
 
   "$mainMod SHIFT, period, layoutmsg, movewindowto r"
   "$mainMod SHIFT, comma, layoutmsg, movewindowto l"
   "$mainMod SHIFT, up, layoutmsg, movewindowto u"
   "$mainMod SHIFT, down, layoutmsg, movewindowto d"
+
+
+  #"$mainMod, left, movesocus, l"
 ];
 
 # Move/resize windows with mainMod + LMB/RMB and dragging
