@@ -12,7 +12,7 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # default shell for all users
-  users.defaultUserShell = pkgs.fish;
+  users.defaultUserShell = pkgs.bash;
 
   # Enable sound with pipewire.
   security.rtkit.enable = true;

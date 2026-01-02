@@ -8,7 +8,7 @@
   nixpkgs.config.cudaSupport = false;
 
   # Allow broken packages
-  #nixpkgs.config.allowBroken = true;
+  nixpkgs.config.allowBroken = true;
 
   # Download Fonts
   fonts.packages = with pkgs;[
@@ -52,6 +52,7 @@
     udisks
     ffmpeg-full
     wget
+    fontconfig
     #--
 
     # Neovim

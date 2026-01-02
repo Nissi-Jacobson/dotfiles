@@ -5,7 +5,7 @@
   nixpkgs.config.allowUnfree = true;
 
   # Allow broken packages
-  nixpkgs.config.allowBroken = false;
+  nixpkgs.config.allowBroken = true;
 
   home.packages = with pkgs; [
     
@@ -17,7 +17,8 @@
     live-server
     mysql-workbench
     eclipses.eclipse-jee
-    jdk
+    #jdk
+    javaPackages.compiler.temurin-bin.jdk-21
     #--
     
     # Utilities
@@ -38,6 +39,8 @@
     xdg-desktop-portal-gtk
     xdg-desktop-portal-gnome
     kdePackages.polkit-kde-agent-1
+    appimage-run
+    xsettingsd
     #--
 
     # Applications
@@ -46,8 +49,10 @@
     qbittorrent
     obsidian
     logseq
+    lorien
     libreoffice-still
     nautilus
+    kdePackages.dolphin
     qalculate-gtk
     librewolf
     obs-studio
@@ -61,6 +66,9 @@
     cheese
     inputs.zen-browser.packages.${ pkgs.stdenv.hostPlatform.system }.default
     brave
+    gimp2-with-plugins
+    darktable
+    ardour
     #--
 
     # Games
@@ -70,6 +78,7 @@
     wineWowPackages.waylandFull
     heroic
     lumafly
+    prismlauncher-unwrapped
     #--
 
   ];

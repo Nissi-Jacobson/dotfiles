@@ -18,7 +18,7 @@
   # Stylix Configurartion
   stylix = {
     enable = true;
-    image = ../wallpapers/sushi_original.png;
+    image = ../wallpapers/wp13737205-redbull-f1-4k-wallpapers.jpg;
     imageScalingMode = "fill"; # fit, fill, center, tile, stretch
     autoEnable = true;
     targets = {

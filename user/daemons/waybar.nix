@@ -11,7 +11,7 @@
       mainBar = {
         layer = "top";
         position = "top";
-        height = 24;
+        height = 18;
 
         modules-left = [ 
         # "custom/workspaces" 
@@ -162,7 +162,7 @@
         };
 
         tray = {
-          icon-size = 16;
+          icon-size = 14;
           spacing = 4;
         };
 
@@ -182,7 +182,7 @@
       }
 
       window#waybar {
-        background: transparent;
+        background: ${base00}; /* transparent */
         color: ${base05};
       }
 

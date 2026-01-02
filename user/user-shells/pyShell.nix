@@ -6,8 +6,22 @@ pkgs.mkShell {
   packages = [
     ( pkgs.python3.withPackages( pypkgs: with pypkgs; [
       pip
-      numpy
-      pandas
+      #numpy
+      #pandas
+
+      ### The AI Guide
+      #fastapi
+      #uvicorn
+      #streamlit
+      #pandas
+      #scikit-learn-extra
+      #joblib
+      #python-pptx
+      #pytest
+      #--
     ]))
+
+    pkgs.docker
+    pkgs.docker-compose
   ];
 }

@@ -14,6 +14,7 @@
     #   };
     # };
 
+
     # MariaDB
     # Enable Sql
     # use mysql_secure_installation to complete installationn
