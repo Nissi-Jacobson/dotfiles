@@ -17,8 +17,8 @@
     live-server
     mysql-workbench
     eclipses.eclipse-jee
-    #jdk
-    javaPackages.compiler.temurin-bin.jdk-21
+    jdk
+    #javaPackages.compiler.openjdk8
     #--
     
     # Utilities
@@ -64,7 +64,7 @@
     gnome-system-monitor
     masterpdfeditor4
     cheese
-    inputs.zen-browser.packages.${ pkgs.stdenv.hostPlatform.system }.default
+    #inputs.zen-browser.packages.${ pkgs.stdenv.hostPlatform.system }.default
     brave
     gimp2-with-plugins
     darktable

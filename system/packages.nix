@@ -11,8 +11,8 @@
   nixpkgs.config.allowBroken = true;
 
   # Download Fonts
+  fonts.enableDefaultPackages = true;
   fonts.packages = with pkgs;[
-    #nerd-fonts.symbols-only
 
     # sans
     inter-nerdfont
@@ -52,7 +52,7 @@
     udisks
     ffmpeg-full
     wget
-    fontconfig
+    pango
     #--
 
     # Neovim

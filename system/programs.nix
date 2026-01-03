@@ -6,7 +6,7 @@
 
     direnv.enable = true;
 
-    fish.enable = false;
+    fish.enable = true;
 
     nm-applet.enable = true;
 

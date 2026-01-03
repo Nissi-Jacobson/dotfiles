@@ -12,7 +12,7 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # default shell for all users
-  users.defaultUserShell = pkgs.bash;
+  users.defaultUserShell = pkgs.fish;
 
   # Enable sound with pipewire.
   security.rtkit.enable = true;
@@ -22,7 +22,7 @@
 
 
   # disabling xterm
-  # programs.xterm.enable = false;
+  #programs.xterm.enable = false;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
