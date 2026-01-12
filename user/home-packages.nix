@@ -52,7 +52,7 @@
     lorien
     libreoffice-still
     nautilus
-    kdePackages.dolphin
+    #kdePackages.dolphin
     qalculate-gtk
     librewolf
     obs-studio
