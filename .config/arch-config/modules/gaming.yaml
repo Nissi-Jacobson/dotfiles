@@ -1,0 +1,8 @@
+description: Gaming Applications
+packages:
+  - steam
+  - lutris
+  - wine
+  - winetricks
+  - heroic-games-launcher-bin
+  - polymc

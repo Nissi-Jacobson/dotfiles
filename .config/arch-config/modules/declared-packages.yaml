@@ -1,0 +1,37 @@
+description: Packages installed via dcli install or dcli search commands
+packages:
+- filelight
+- qalculate-gtk
+- fastfetch
+- hayase-desktop-bin
+- ani-cli
+- tlp
+- tlpui
+- mkvtoolnix-cli
+- python311
+- mkvtoolnix-gui
+- brave-bin
+- uget
+- uget-integrator-firefox
+- unrar
+- unzip
+- bottles
+- mangohud
+- goverlay
+- audacity
+- scrcpy
+- blueman
+- antigravity
+- bluez
+- bluez-utils
+- sc-controller
+exclude: []
+conflicts: []
+pre_install_hook: null
+post_install_hook: null
+hook_behavior: ask
+pre_hook_behavior: null
+post_hook_behavior: null
+run_hooks_as_user: false
+post_disable_hook: null
+post_disable_behavior: null
