@@ -1,0 +1,52 @@
+/* Catppuccin Mocha */
+* {
+  font-family: "0xProto Nerd Font", "Font Awesome 6 Free", sans-serif;
+  font-size: 13px;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+}
+
+window#waybar {
+  background: rgba(30, 30, 46, 0.92);   /* base */
+  color: #cdd6f4;                        /* text */
+  border-bottom: 2px solid #313244;      /* surface0 */
+}
+
+/* Workspaces */
+#workspaces button {
+  padding: 0 8px;
+  color: #6c7086;       /* overlay0 */
+  background: transparent;
+}
+#workspaces button.active {
+  color: #cba6f7;       /* mauve */
+  background: rgba(203, 166, 247, 0.15);
+  border-radius: 8px;
+}
+#workspaces button:hover {
+  color: #cdd6f4;
+  background: rgba(205, 214, 244, 0.1);
+  border-radius: 8px;
+}
+
+/* Shared module style */
+#clock, #cpu, #memory, #battery,
+#network, #pulseaudio, #tray, #window {
+  padding: 0 12px;
+  color: #cdd6f4;
+}
+
+#clock       { color: #89b4fa; }   /* blue */
+#cpu         { color: #a6e3a1; }   /* green */
+#memory      { color: #f9e2af; }   /* yellow */
+#battery     { color: #a6e3a1; }
+#battery.warning  { color: #fab387; }  /* peach */
+#battery.critical { color: #f38ba8; }  /* red */
+#network     { color: #89dceb; }   /* sky */
+#pulseaudio  { color: #cba6f7; }   /* mauve */
+
+/* Separator between right modules */
+#cpu, #memory, #battery, #network, #pulseaudio {
+  border-left: 1px solid #313244;
+}
