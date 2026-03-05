@@ -1,0 +1,38 @@
+description: Niri Module
+
+# List of packages in this module
+packages: 
+  - dunst
+  - waybar
+  - wofi
+  - wl-clipboard
+  - brightnessctl
+  - wlogout
+  - nwg-look
+  - catppuccin-gtk-theme-mocha
+  - catppuccin-plasma-colorscheme-mocha
+  - kvantum
+  - qt5ct
+  - qt6ct
+  - kvantum-theme-catppuccin-git
+  - swww
+  - niri
+  - mako
+  - xdg-desktop-portal-gtk
+  - xdg-desktop-portal-gnome
+  - xwayland-satellite
+  - udiskie
+  - alacritty
+  - rofi
+  - sunsetr
+  - playerctl
+
+# Modules that conflict with this one
+conflicts: []
+
+# Script to run before installing packages (optional)
+# Useful for system preparation like enabling multilib
+pre_install_hook: ""
+
+# Script to run after installing packages (optional)
+post_install_hook: ""
