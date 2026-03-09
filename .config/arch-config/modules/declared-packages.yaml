@@ -31,6 +31,10 @@ packages:
 - hyprsunset
 - ttf-firacode-nerd
 - gowall
+- lib32-mangohud
+- gamescope
+- motion
+- snapshot
 exclude: []
 conflicts: []
 pre_install_hook: null

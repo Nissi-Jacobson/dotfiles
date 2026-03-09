@@ -2,11 +2,12 @@ host: archlinux
 description: Work Laptop
 import: []
 enabled_modules:
-- base
-- user-apps
-- gaming
-- user-nvim
-- user-programming
+  - base
+  - gaming
+  - user-apps
+  - user-nvim
+  - user-programming
+  - niri
 packages:
   - fish
   - zsh
@@ -36,7 +37,7 @@ default_apps:
   scope: user
   browser: librewolf
   text_editor: null
-  file_manager: thunar
+  file_manager: null
   terminal: kitty
   video_player: mpv
   audio_player: null
